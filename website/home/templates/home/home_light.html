@@ -336,9 +336,11 @@ if (typeof TemplateCustomizer !== 'undefined') {
             </div>
           </div>
         </li>
+        {% if user.is_authenticated and user.is_superuser%}
         <li class="nav-item">
-          <a class="nav-link fw-medium" href="/materio-html-django-admin-template/demo-1/" target="_blank">Admin</a>
+          <a class="nav-link fw-medium" href="{% url 'admin:login'%}" target="_blank">Admin</a>
         </li>
+        {% endif %}
       </ul>
     </div>
     <div class="landing-menu-overlay d-lg-none"></div>
@@ -486,7 +488,7 @@ if (typeof TemplateCustomizer !== 'undefined') {
     <div class="container">
       <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
         <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-        <span class="text-uppercase">real customers reviews</span>
+        <span class="text-uppercase">proud to have</span>
       </h6>
       <h3 class="text-center mb-2"><span class="fw-bold">Success stories</span> from clients</h3>
       <p class="text-center fw-medium mb-3 mb-md-5">See what our customers have to say about their experience.</p>
@@ -494,31 +496,35 @@ if (typeof TemplateCustomizer !== 'undefined') {
     <div class="swiper-reviews-carousel overflow-hidden mb-5 pt-4">
       <div class="swiper" id="swiper-reviews">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card h-100">
-              <div class="card-body text-body d-flex flex-column justify-content-between text-center">
-                <div class="mb-3">
-                  <img src="{% static 'light/logo-4.png' %}" alt="client logo" class="client-logo img-fluid" />
-                </div>
-                <p>
-                  “I've never used a theme as versatile and flexible as Materio. It's my go to for building dashboard
-                  sites on almost any project.”
-                </p>
-                <div class="text-warning mb-3">
-                  <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                  <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                  <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                  <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                  <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                </div>
-                <div>
-                  <h6 class="mb-1">Eugenia Moore</h6>
-                  <p class="mb-0">Founder of Hubspot</p>
+          {% for testimonial in testimonials %}
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                  <div class="mb-3">
+                    <img src="{{ MEDIA_URL }}/{{testimonial.company_logo}}" alt="client logo" class="client-logo img-fluid" />
+                  </div>
+                  <p>
+                    “{{testimonial.content}}”
+                  </p>
+                  <div class="text-warning mb-3">
+                    {% for star in "*****" %}
+                      {% if forloop.counter <= testimonial.rating %}
+                        <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      {% else %}
+                        <i class="tf-icons mdi mdi-star-outline mdi-24px"></i>
+                      {% endif %}
+                    {% endfor %}
+
+                  </div>
+                  <div>
+                    <h6 class="mb-1">{{testimonial.giver_name}}</h6>
+                    <p class="mb-0">{{testimonial.giver_designation}} at {{testimonial.company_name}}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide">
+          {% endfor %}
+          <!-- <div class="swiper-slide">
             <div class="card h-100">
               <div class="card-body text-body d-flex flex-column justify-content-between text-center">
                 <div class="mb-3">
@@ -844,7 +850,7 @@ if (typeof TemplateCustomizer !== 'undefined') {
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -978,231 +984,6 @@ if (typeof TemplateCustomizer !== 'undefined') {
     </div>
   </section>
   <!-- Our great team: End -->
-
-  <!-- Pricing plans: Start -->
-  <section id="landingPricing" class="section-py bg-body landing-pricing">
-    <div class="container bg-icon-left">
-      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-        <img src="{% static 'light/section-tilte-icon.pn' %}g" alt="section title icon" class="me-2" />
-        <span class="text-uppercase">pricing plans</span>
-      </h6>
-      <h3 class="text-center mb-0"><span class="fw-bold">Tailored pricing plans</span> designed for you</h3>
-      <p class="text-center fw-medium mb-5 pt-2 pb-lg-5">
-        All plans include 40+ advanced tools and features to boost your product.<br />
-        the best plan to fit your needs.
-      </p>
-      <div id="slider-pricing" class="mb-5"></div>
-      <div class="row gy-4 pt-lg-3">
-        <!-- Basic Plan: Start -->
-        <div class="col-xl-4 col-lg-6">
-          <div class="card shadow-none">
-            <div class="card-header border-0">
-              <h3 class="mb-2 pb-1">Basic Plan</h3>
-              <div class="d-flex align-items-center">
-                <h5 class="d-flex mb-0"><sup class="h5 mt-3">$</sup><span class="display-3 fw-bold">20</span></h5>
-                <div class="ms-2 ps-1">
-                  <h6 class="mb-1">Per month</h6>
-                  <p class="small mb-0">10% off for yearly subscription</p>
-                </div>
-              </div>
-              <img src="{% static 'light/smiling-icon.png' %}" alt="smiling icon" />
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled">
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Timeline
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Basic search
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Live chat widget
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Email marketing
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Custom Forms
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Traffic analytics
-                  </h5>
-                </li>
-              </ul>
-              <hr />
-              <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div class="me-1">
-                  <h6 class="mb-1">Basic Support</h6>
-                  <p class="small mb-0">Only Email</p>
-                </div>
-                <span class="badge bg-label-primary rounded-pill">AVG. Time: 24h</span>
-              </div>
-              <div class="text-center mt-4 pt-2">
-                <a href="/materio-html-django-admin-template/demo-1/front/payment/" class="btn btn-outline-primary w-100">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Basic Plan: End -->
-
-        <!-- Favourite Plan: Start -->
-        <div class="col-xl-4 col-lg-6">
-          <div class="card border-primary border-2 shadow-none">
-            <div class="card-header border-0">
-              <h3 class="mb-2 pb-1">Favourite Plan</h3>
-              <div class="d-flex align-items-center">
-                <h5 class="d-flex mb-0"><sup class="h5 mt-3">$</sup><span class="display-3 fw-bold">51</span></h5>
-                <div class="ms-2 ps-1">
-                  <h6 class="mb-1">Per month</h6>
-                  <p class="small mb-0">10% off for yearly subscription</p>
-                </div>
-              </div>
-              <img src="{% static 'light/smiling-icon.png' %}" alt="smiling icon" />
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled">
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Everything in basic
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Timeline with database
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Advanced search
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Marketing automation
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Advanced chatbot
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Campaign management
-                  </h5>
-                </li>
-              </ul>
-              <hr />
-              <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div class="me-1">
-                  <h6 class="mb-1">Standard Support</h6>
-                  <p class="small mb-0">Email & Chat</p>
-                </div>
-                <span class="badge bg-label-primary rounded-pill">AVG. Time: 6h</span>
-              </div>
-              <div class="text-center mt-4 pt-2">
-                <a href="/materio-html-django-admin-template/demo-1/front/payment/" class="btn btn-primary w-100">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Favourite Plan: End -->
-
-        <!-- Standard Plan: Start -->
-        <div class="col-xl-4 col-lg-6">
-          <div class="card shadow-none">
-            <div class="card-header border-0">
-              <h3 class="mb-2 pb-1">Standard Plan</h3>
-              <div class="d-flex align-items-center">
-                <h5 class="d-flex mb-0"><sup class="h5 mt-3">$</sup><span class="display-3 fw-bold">99</span></h5>
-                <div class="ms-2 ps-1">
-                  <h6 class="mb-1">Per month</h6>
-                  <p class="small mb-0">10% off for yearly subscription</p>
-                </div>
-              </div>
-              <img src="{% static 'light/smiling-icon.png' %}" alt="smiling icon" />
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled">
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Everything in premium
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Timeline with database
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Fuzzy search
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    A/B testing sanbox
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Custom permissions
-                  </h5>
-                </li>
-                <li>
-                  <h5>
-                    <img src="{% static 'light/list-arrow-icon.png' %}" alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
-                    Social media automation
-                  </h5>
-                </li>
-              </ul>
-              <hr />
-              <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div class="me-1">
-                  <h6 class="mb-1">Exclusive Support</h6>
-                  <p class="small mb-0">Email, Chat & Google Meet</p>
-                </div>
-                <span class="badge bg-label-primary rounded-pill">Live Support</span>
-              </div>
-              <div class="text-center mt-4 pt-2">
-                <a href="/materio-html-django-admin-template/demo-1/front/payment/" class="btn btn-outline-primary w-100">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Standard Plan: End -->
-      </div>
-    </div>
-  </section>
-  <!-- Pricing plans: End -->
 
   <!-- Fun facts: Start -->
   <section id="landingFunFacts" class="section-py landing-fun-facts">
