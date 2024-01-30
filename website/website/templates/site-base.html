@@ -1,0 +1,372 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-navbar-fixed  layout-menu-fixed    layout-wide" dir="ltr"
+  data-theme="theme-default" data-assets-path="{% static 'light' %}" data-base-url="" data-framework="django"
+  data-template="vertical-menu-front-theme-default-light">
+
+<head>
+  <base href="/materio-html-django-admin-template/demo-1/">
+  <title>izyansoft - Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'light/img/favicon/favicon.ico' %}" />
+
+  <!-- Include the styles partial -->
+
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="{% static 'light/materialdesignicons.css' %}" />
+
+  <!--Core CSS -->
+
+  <link rel="stylesheet" href="{% static 'light/core.css' %}" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="{% static 'light/theme-default.css' %}" class="template-customizer-theme-css" />
+
+
+  <link rel="stylesheet" href="{% static 'light/demo.css' %}" />
+  <link rel="stylesheet" href="{% static 'light/front-page.css' %}" />
+  <link rel="stylesheet" href="{% static 'light/node-waves.css' %}" />
+  <!--Vendor CSS-->
+
+
+
+
+  <link rel="stylesheet" href="{% static 'light/nouislider.css' %}" />
+  <link rel="stylesheet" href="{% static 'light/swiper.css' %}" />
+
+
+  <!--Page CSS-->
+
+
+  <link rel="stylesheet" href="{% static 'light/front-page-landing.css' %}">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- Include the scripts partial (required ) -->
+
+
+  <!-- Helpers -->
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <script src="{% static 'light/helpers.js' %}"></script>
+  <!--? Template customizer: To hide customizer set display_customizer value false in config.js.  -->
+
+  <!-- <script src="{% static 'light/template-customizer.js' %}"></script> -->
+
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="{% static 'light/config.js' %}"></script>
+  <!-- beautify ignore:start -->
+
+<script>
+  if (typeof TemplateCustomizer !== 'undefined') {
+    window.templateCustomizer = new TemplateCustomizer({
+      cssPath: '',
+      themesPath: '',
+      defaultStyle: "light", // Required as system style can't decided without JS
+      lang: 'en',
+      pathResolver: function (path) {
+        var resolvedPaths = {
+          // Core stylesheets
+          'core.css': "{% static 'light/core.css' %}",
+          'core-dark.css': "{% static 'light/core-dark.css' %}",
+
+          'theme-default.css': "{% static 'light/theme-default.css' %}",
+          'theme-default-dark.css': "{% static 'light/theme-default-dark.css' %}",
+
+          'theme-bordered.css': "{% static 'light/theme-bordered.css' %}",
+          'theme-bordered-dark.css': "{% static 'light/theme-bordered-dark.css' %}",
+
+          'theme-semi-dark.css': "{% static 'light/theme-semi-dark.css' %}",
+          'theme-semi-dark-dark.css': "{% static 'light/theme-semi-dark-dark.css' %}"
+        }
+        return resolvedPaths[path] || path;
+      },
+      controls: ['rtl', 'style'],
+    });
+  }
+
+</script>
+
+
+<!-- remove while creating package  -->
+<!-- Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DDHKGP');</script> -->
+<!-- End Google Tag Manager -->
+<!-- remove while creating package end  -->
+<!-- beautify ignore:end -->
+
+
+</head>
+
+<body>
+
+
+
+  <!-- Navbar: Start -->
+
+
+  <!-- Navbar: Start -->
+  <nav class="layout-navbar container shadow-none py-0">
+    <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
+      <!-- Menu logo wrapper: Start -->
+      <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4">
+        <!-- Mobile menu toggle: Start-->
+        <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="tf-icons mdi mdi-menu mdi-24px align-middle"></i>
+        </button>
+        <!-- Mobile menu toggle: End-->
+        <a href="/#landingTop" class="app-brand-link">
+          <span class="app-brand-logo demo"><span style="color:#9055FD;">
+            </span>
+          </span>
+          <span class="app-brand-text demo menu-text fw-semibold ms-2 ps-1">izyansoft</span>
+        </a>
+      </div>
+      <!-- Menu logo wrapper: End -->
+      <!-- Menu wrapper: Start -->
+      <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+        <button class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <i class="tf-icons mdi mdi-close"></i>
+        </button>
+        <ul class="navbar-nav me-auto p-3 p-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/#landingFAQ">Why izyansoft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="{% url 'careers' %}">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/#whatwedo">What we do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/#landingReviews">Our clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium text-nowrap" href="/#landingContact">Contact us</a>
+          </li>
+        
+          {% if user.is_authenticated and user.is_superuser%}
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="{% url 'admin:login'%}" target="_blank">Admin</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="landing-menu-overlay d-lg-none"></div>
+      <!-- Menu wrapper: End -->
+      <!-- Toolbar: Start -->
+      <!-- <ul class="navbar-nav flex-row align-items-center ms-auto">
+        <li>
+          <a href="/materio-html-django-admin-template/demo-1/login/"
+            class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4" target="_blank"><span
+              class="tf-icons mdi mdi-account me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+        </li>
+      </ul> -->
+      <!-- Toolbar: End -->
+    </div>
+  </nav>
+  <!-- Navbar: End -->
+
+  <!-- Navbar: End -->
+        {% block content %}{% endblock %}
+  <!-- Footer: Start -->
+
+
+  <!-- Footer: Start -->
+  <footer class="landing-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gx-0 gy-4 g-md-5">
+          <div class="col-lg-4">
+            <a href="/" class="app-brand-link mb-4">
+              <span class="app-brand-text demo footer-link fw-semibold">About IzyanSoft</span>
+            </a>
+
+            <p>
+              Welcome to IzyanSoft, where innovation meets expertise. As a leading force in the realm of software
+              solutions, we are dedicated to empowering businesses with cutting-edge technologies.
+            </p>
+            <form>
+              <div class="d-flex mt-2 gap-3">
+                <div class="form-floating form-floating-outline w-px-250">
+                  <input type="text" class="form-control bg-transparent" id="newsletter-email"
+                    placeholder="Your email" />
+                  <label for="newsletter-email">Subscribe to newsletter</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <h6 class="footer-title mb-4">Have a project in mind? Let's talk!</h6>
+            For Enquiries: meetus@izyansoft.com
+            <br />
+            For Job Oppertunities: hr@izyansoft.com
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h6 class="footer-title mb-4">Important Links</h6>
+            <p><a href="/#landingFAQ">About Us</a></p>
+            <p><a href="/#landingContact">Contact Us</a></p>
+
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h6 class="footer-title mb-4">Head Quarters</h6>
+            <p>
+              214-A Defence Lahore, Punjab 54000
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom py-3">
+      <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+        <div class="mb-2 mb-md-0">
+          <span class="footer-text">©
+            <script>
+              document.write(new Date().getFullYear());
+
+            </script>
+            IzyanSoft. All Rights Reserved.
+          </span>
+        </div>
+        <div>
+          Join our vibrant communinty: &nbsp; &nbsp;
+          <a href="https://www.linkedin.com/company/85667022" class="footer-link me-2" target="_blank"><i
+              class="mdi mdi-linkedin"></i></a>
+          <a href="https://web.facebook.com/izyansoft" class="footer-link me-2" target="_blank"><i
+              class="mdi mdi-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer: End -->
+
+  <!-- Footer: End -->
+
+  <!-- JavaScript for AJAX submission -->
+  <script>
+
+    // Function to get CSRF token from cookie
+    function getCookie(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          // Check if the cookie name matches with the desired one
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+
+
+    function submitContactUsForm() {
+      document.getElementById('contact_us_errors').innerHTML = '';
+      document.getElementById('contact_us_success_msg').innerHTML = '';
+
+      // Get form values
+      var service = document.getElementById('service').value;
+      var orgName = document.getElementById('org-name').value;
+      var email = document.getElementById('email').value;
+      var fullName = document.getElementById('fullname').value;
+      var requirements = document.getElementById('requirements').value;
+
+      // Validate form fields
+      var errors = [];
+      if (!service) errors.push('Please select a service.');
+      if (!orgName) errors.push('Please provide a business name.');
+      if (!email) errors.push('Please provide an email address.');
+      if (!fullName) errors.push('Please provide your full name.');
+      if (!requirements) errors.push('Please add your project requirements.');
+      // Email validation
+      var emailRegex = /^\S+@\S+\.\S+$/;
+      if (!email || !emailRegex.test(email)) {
+        errors.push('Please provide a valid email address.');
+      }
+
+      // Display errors if any
+      if (errors.length > 0) {
+        var errorList = document.createElement('ul');
+        errors.forEach(function (error) {
+          var listItem = document.createElement('li');
+          listItem.textContent = error;
+          errorList.appendChild(listItem);
+        });
+        document.getElementById('contact_us_errors').appendChild(errorList);
+      } else {
+        // Get the CSRF token from the cookie
+        var csrftoken = getCookie('csrftoken');
+        var formData = {
+          service: document.getElementById('service').value,
+          org_name: document.getElementById('org-name').value,
+          email: document.getElementById('email').value,
+          full_name: document.getElementById('fullname').value,
+          requirements: document.getElementById('requirements').value,
+          csrfmiddlewaretoken: csrftoken
+        };
+        $.ajax({
+          type: 'POST',
+          url: '{% url "submit_contact_us_form" %}',
+          data: formData,
+          success: function (response) {
+            // Handle success response
+            console.log(response);
+          },
+          error: function (error) {
+            // Handle error response
+            console.log(error.responseJSON);
+          },
+        });
+        $('#contact_us_form').trigger('reset')
+        $('#contact_us_success_msg').html('Your requirements submitted successfully, our business development team would contact you soon.')
+      }
+    }
+  </script>
+
+  <!--Vendors Javascript-->
+  <script src="{% static 'light/dropdown-hover.js' %}"></script>
+  <script src="{% static 'light/mega-dropdown.js' %}"></script>
+  <script src="{% static 'light/popper.js' %}"></script>
+  <script src="{% static 'light/bootstrap.js' %}"></script>
+  <script src="{% static 'light/node-waves.js' %}"></script>
+  <script src="{% static 'light/front-main.js' %}"></script>
+
+
+  <!--Vendors Javascript-->
+
+
+  <script src="{% static 'light/nouislider.js' %}"></script>
+  <script src="{% static 'light/swiper.js' %}"></script>
+
+
+  <!--Page Javascript-->
+
+
+  <script src="{% static 'light/front-page-landing.js' %}"></script>
+
+
+</body>
+
+</html>

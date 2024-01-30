@@ -1,947 +1,352 @@
+{% extends 'site-base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
+{% block content %}
+<!-- Content:Start -->
 
-<html lang="en" class="light-style layout-navbar-fixed  layout-menu-fixed    layout-wide" dir="ltr"
-  data-theme="theme-default" data-assets-path="{% static 'light' %}" data-base-url="" data-framework="django"
-  data-template="vertical-menu-front-theme-default-light">
-
-<head>
-  <base href="/materio-html-django-admin-template/demo-1/">
-  <title>Landing Page - Front Pages | Materio - Django Admin Template</title>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'light/img/favicon/favicon.ico' %}" />
-
-  <!-- Include the styles partial -->
-
-
-  <!--Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
-    rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="{% static 'light/materialdesignicons.css' %}" />
-
-  <!--Core CSS -->
-
-  <link rel="stylesheet" href="{% static 'light/core.css' %}" class="template-customizer-core-css" />
-  <link rel="stylesheet" href="{% static 'light/theme-default.css' %}" class="template-customizer-theme-css" />
-
-
-  <link rel="stylesheet" href="{% static 'light/demo.css' %}" />
-  <link rel="stylesheet" href="{% static 'light/front-page.css' %}" />
-  <link rel="stylesheet" href="{% static 'light/node-waves.css' %}" />
-  <!--Vendor CSS-->
-
-
-
-
-  <link rel="stylesheet" href="{% static 'light/nouislider.css' %}" />
-  <link rel="stylesheet" href="{% static 'light/swiper.css' %}" />
-
-
-  <!--Page CSS-->
-
-
-  <link rel="stylesheet" href="{% static 'light/front-page-landing.css' %}">
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-  <!-- Include the scripts partial (required ) -->
-
-
-  <!-- Helpers -->
-  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-  <script src="{% static 'light/helpers.js' %}"></script>
-  <!--? Template customizer: To hide customizer set display_customizer value false in config.js.  -->
-
-  <!-- <script src="{% static 'light/template-customizer.js' %}"></script> -->
-
-  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-  <script src="{% static 'light/config.js' %}"></script>
-  <!-- beautify ignore:start -->
-
-<script>
-  if (typeof TemplateCustomizer !== 'undefined') {
-    window.templateCustomizer = new TemplateCustomizer({
-      cssPath: '',
-      themesPath: '',
-      defaultStyle: "light", // Required as system style can't decided without JS
-      lang: 'en',
-      pathResolver: function (path) {
-        var resolvedPaths = {
-          // Core stylesheets
-          'core.css': "{% static 'light/core.css' %}",
-          'core-dark.css': "{% static 'light/core-dark.css' %}",
-
-          'theme-default.css': "{% static 'light/theme-default.css' %}",
-          'theme-default-dark.css': "{% static 'light/theme-default-dark.css' %}",
-
-          'theme-bordered.css': "{% static 'light/theme-bordered.css' %}",
-          'theme-bordered-dark.css': "{% static 'light/theme-bordered-dark.css' %}",
-
-          'theme-semi-dark.css': "{% static 'light/theme-semi-dark.css' %}",
-          'theme-semi-dark-dark.css': "{% static 'light/theme-semi-dark-dark.css' %}"
-        }
-        return resolvedPaths[path] || path;
-      },
-      controls: ['rtl', 'style'],
-    });
-  }
-
-</script>
-
-
-<!-- remove while creating package  -->
-<!-- Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5DDHKGP');</script> -->
-<!-- End Google Tag Manager -->
-<!-- remove while creating package end  -->
-<!-- beautify ignore:end -->
-
-
-</head>
-
-<body>
-
-
-
-  <!-- Navbar: Start -->
-
-
-  <!-- Navbar: Start -->
-  <nav class="layout-navbar container shadow-none py-0">
-    <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
-      <!-- Menu logo wrapper: Start -->
-      <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4">
-        <!-- Mobile menu toggle: Start-->
-        <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <i class="tf-icons mdi mdi-menu mdi-24px align-middle"></i>
-        </button>
-        <!-- Mobile menu toggle: End-->
-        <a href="/" class="app-brand-link">
-          <span class="app-brand-logo demo"><span style="color:#9055FD;">
-            </span>
-          </span>
-          <span class="app-brand-text demo menu-text fw-semibold ms-2 ps-1">izyansoft</span>
+<div data-bs-spy="scroll" class="scrollspy-example">
+  <!-- Hero: Start -->
+  <section id="landingTop" class="landing-hero">
+    <div class="container">
+      <div class="hero-text-box text-center">
+        <h1 class="text-primary hero-title">Helping the world with impactful software solutions</h1>
+        <h2 class="h6 mb-4 pb-1 lh-lg">
+          Enabling growth through smart software solutions<br />Your success, our mission – tech solutions that
+          deliver
+        </h2>
+        <a href="/#landingContact" class="btn btn-primary">Let’s get started with your project</a>
+      </div>
+      <div class="position-relative hero-animation-img">
+        <a href="/materio-html-django-admin-template/demo-1/dashboard/crm/" target="_blank">
+          <div class="hero-dashboard-img text-center">
+            <img src="{% static 'light/izyansoft-img-banner-01.png' %}" alt="hero dashboard" class="animation-img"
+              data-speed="2" />
+          </div>
+          <div class="position-absolute hero-elements-img">
+            <!-- <img src="{% static 'light/banner-imag-02 copy.png' %}" alt="hero elements" class="animation-img"
+              data-speed="4" /> -->
+          </div>
         </a>
       </div>
-      <!-- Menu logo wrapper: End -->
-      <!-- Menu wrapper: Start -->
-      <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
-        <button class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl" type="button"
-          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <i class="tf-icons mdi mdi-close"></i>
-        </button>
-        <ul class="navbar-nav me-auto p-3 p-lg-0">
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="/#landingFAQ">Why izyansoft</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="/#landingHero">Careers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="/#whatwedo">What we do</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="/#landingReviews">Our clients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium text-nowrap" href="/#landingContact">Contact us</a>
-          </li>
-          <li class="nav-item mega-dropdown ">
-            <a href="javascript:void(0);"
-              class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium" aria-expanded="false"
-              data-bs-toggle="mega-dropdown" data-trigger="hover">
-              <span data-i18n="Pages">Pages</span>
-            </a>
-            <div class="dropdown-menu p-4">
-              <div class="row gy-4">
-                <div class="col-12 col-lg">
-                  <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
-                    <div class="avatar avatar-sm flex-shrink-0 me-2">
-                      <span class="avatar-initial rounded bg-label-primary"><i
-                          class='mdi mdi-view-grid-outline'></i></span>
-                    </div>
-                    <span class="ps-1">Other</span>
-                  </div>
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center "
-                        href="/materio-html-django-admin-template/demo-1/front/pricing/">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        <span data-i18n="Pricing">Pricing</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center "
-                        href="/materio-html-django-admin-template/demo-1/front/payment/">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        <span data-i18n="Payment">Payment</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center "
-                        href="/materio-html-django-admin-template/demo-1/front/checkout/">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        <span data-i18n="Checkout">Checkout</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center "
-                        href="/materio-html-django-admin-template/demo-1/front/help_center/">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        <span data-i18n="Help Center">Help Center</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-12 col-lg">
-                  <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
-                    <div class="avatar avatar-sm flex-shrink-0 me-2">
-                      <span class="avatar-initial rounded bg-label-primary"><i
-                          class='mdi mdi-lock-open-outline'></i></span>
-                    </div>
-                    <span class="ps-1">Auth Demo</span>
-                  </div>
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/login/basic/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Login (Basic)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/login/cover/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Login (Cover)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/register/basic/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Register (Basic)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/register/cover/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Register (Cover)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/register/multisteps/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Register (Multi-steps)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/forgot_password/basic/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Forgot Password (Basic)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/forgot_password/cover/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Forgot Password (Cover)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/reset_password/basic/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Reset Password (Basic)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/reset_password/cover/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Reset Password (Cover)
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-12 col-lg">
-                  <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
-                    <div class="avatar avatar-sm flex-shrink-0 me-2">
-                      <span class="avatar-initial rounded bg-label-primary"><i class='mdi mdi-image-outline'></i></span>
-                    </div>
-                    <span class="ps-1">Other</span>
-                  </div>
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/pages/misc/error/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Error
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/pages/misc/under_maintenance/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Under Maintenance
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/pages/misc/comingsoon/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Coming Soon
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/pages/misc/not_authorized/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Not Authorized
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/verify_email/basic/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Verify Email (Basic)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/verify_email/cover/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Verify Email (Cover)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/two_steps/basic/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Two Steps (Basic)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link d-flex align-items-center"
-                        href="/materio-html-django-admin-template/demo-1/auth/two_steps/cover/" target="_blank">
-                        <i class='mdi mdi-radiobox-blank mdi-14px me-2'></i>
-                        Two Steps (Cover)
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-4 d-none d-lg-block">
-                  <div class="bg-body nav-img-col p-2">
-                    <img src="{% static 'light/av-item-col-img-dark.png' %}" class="img-fluid scaleX-n1-rtl w-100"
-                      alt="nav item col image" data-app-light-img="front-pages/misc/nav-item-col-img-light.png"
-                      data-app-dark-img="front-pages/misc/nav-item-col-img-dark.png" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          {% if user.is_authenticated and user.is_superuser%}
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="{% url 'admin:login'%}" target="_blank">Admin</a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-      <div class="landing-menu-overlay d-lg-none"></div>
-      <!-- Menu wrapper: End -->
-      <!-- Toolbar: Start -->
-      <ul class="navbar-nav flex-row align-items-center ms-auto">
-
-        <!-- Style Switcher -->
-        <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
-          <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-            <i class='mdi mdi-24px'></i>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
-            <li>
-              <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
-                <span class="align-middle"><i class='mdi mdi-weather-sunny me-2'></i>Light</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
-                <span class="align-middle"><i class="mdi mdi-weather-night me-2"></i>Dark</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
-                <span class="align-middle"><i class="mdi mdi-monitor me-2"></i>System</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- / Style Switcher-->
-
-        <!-- navbar button: Start -->
-
-        <li>
-          <a href="/materio-html-django-admin-template/demo-1/login/"
-            class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4" target="_blank"><span
-              class="tf-icons mdi mdi-account me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
-        </li>
-
-        <!-- navbar button: End -->
-      </ul>
-      <!-- Toolbar: End -->
     </div>
-  </nav>
-  <!-- Navbar: End -->
+  </section>
+  <!-- Hero: End -->
 
-  <!-- Navbar: End -->
-
-
-  <!-- Content:Start -->
-
-  <div data-bs-spy="scroll" class="scrollspy-example">
-    <!-- Hero: Start -->
-    <section id="landingHero" class="section-py landing-hero">
-      <div class="container">
-        <div class="hero-text-box text-center">
-          <h1 class="text-primary hero-title">Helping the world with impactful software solutions</h1>
-          <h2 class="h6 mb-4 pb-1 lh-lg">
-            Enabling growth through smart software solutions<br />Your success, our mission – tech solutions that
-            deliver
-          </h2>
-          <a href="/#landingContact" class="btn btn-primary">Let’s get started with your project</a>
-        </div>
-        <div class="position-relative hero-animation-img">
-          <a href="/materio-html-django-admin-template/demo-1/dashboard/crm/" target="_blank">
-            <div class="hero-dashboard-img text-center">
-              <img src="{% static 'light/izyansoft-img-banner-01.png' %}" alt="hero dashboard" class="animation-img"
-                data-speed="2" />
-            </div>
-            <div class="position-absolute hero-elements-img">
-              <!-- <img src="{% static 'light/banner-imag-02 copy.png' %}" alt="hero elements" class="animation-img"
-                data-speed="4" /> -->
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Hero: End -->
-
-    <!-- FAQ: Start -->
-    <section id="landingFAQ" class="section-py bg-body landing-faq" style="margin-top: 110px;">
-      <div class="container bg-icon-right">
-        <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-          <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-        </h6>
-        <h3 class="text-center mb-2">Why<span class="fw-bold"> izyansoft</span></h3>
-        <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
-          Choosing us would be a pleasure for us to make your business smart and robust
-        </p>
-        <div class="row gy-5">
-          <div class="col-lg-12">
-            <div>
-              <span class="fw-bold"> Welcome to izyansoft - Crafting Innovative Solutions Since 2015 </span>
-              <br/><span>At izyansoft, we take pride in our journey as a leading software agency, dedicated to delivering
-                cutting-edge solutions to our clients worldwide. With a rich history spanning seven years, we have
-                consistently pushed the boundaries of technology, providing a range of services that cater to the
-                diverse needs of businesses across industries.</span>
-              <br/><br/><span class="fw-bold"> Our Expertise </span>
-              <br/><span>Web App Development to Mobile App Development, our team of skilled professionals excels in
-                transforming ideas into robust and scalable software solutions. Our proficiency extends to specialized
-                domains such as Education Technology, Web Scraping, Data and Artificial Intelligence, QA and Software
-                Testing, UX, Product, and Design. Whether you are a startup looking to build an MVP or an established
-                enterprise in need of customized software, we have the expertise to meet your requirements.</span>
-              <br/><br/><span class="fw-bold"> Commitment to Quality </span>
-              <br/><span>What sets us apart is our unwavering commitment to quality. We believe in creating not just software
-                but experiences that leave a lasting impression. Our rigorous testing processes ensure that every
-                solution we deliver is of the highest standard, meeting the expectations of our clients and end-users
-                alike.</span>
-              <br/><br/><span class="fw-bold"> Collaborative Approach </span>
-              <br/><span>At the heart of our success is our collaborative approach. We work closely with our clients,
-                understanding their vision and goals, to create tailor-made solutions that drive success. Our team
-                becomes an extension of yours, ensuring seamless communication and a shared commitment to
-                excellence.</span>
-              <br/><br/><span class="fw-bold"> Looking Forward </span>
-              <br/><span>As we reflect on our journey so far, we express gratitude to our clients, partners, and the talented
-                individuals who have been a part of our story. Looking forward, we are excited about the opportunities
-                that lie ahead. Whether you're embarking on a new project or seeking to enhance your existing software,
-                izyansoft is your trusted partner for innovation and success.</span>
-            </div>
+  <!-- FAQ: Start -->
+  <section id="landingFAQ" class="section-py bg-body landing-faq" style="margin-top: 265px;">
+    <div class="container bg-icon-right">
+      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
+      </h6>
+      <h3 class="text-center mb-2">Why<span class="fw-bold"> izyansoft</span></h3>
+      <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
+        Choosing us would be a pleasure for us to make your business smart and robust
+      </p>
+      <div class="row gy-5">
+        <div class="col-lg-12">
+          <div>
+            <span class="fw-bold"> Welcome to izyansoft - Crafting Innovative Solutions Since 2015 </span>
+            <br/><span>At izyansoft, we take pride in our journey as a leading software agency, dedicated to delivering
+              cutting-edge solutions to our clients worldwide. With a rich history spanning seven years, we have
+              consistently pushed the boundaries of technology, providing a range of services that cater to the
+              diverse needs of businesses across industries.</span>
+            <br/><br/><span class="fw-bold"> Our Expertise </span>
+            <br/><span>Web App Development to Mobile App Development, our team of skilled professionals excels in
+              transforming ideas into robust and scalable software solutions. Our proficiency extends to specialized
+              domains such as Education Technology, Web Scraping, Data and Artificial Intelligence, QA and Software
+              Testing, UX, Product, and Design. Whether you are a startup looking to build an MVP or an established
+              enterprise in need of customized software, we have the expertise to meet your requirements.</span>
+            <br/><br/><span class="fw-bold"> Commitment to Quality </span>
+            <br/><span>What sets us apart is our unwavering commitment to quality. We believe in creating not just software
+              but experiences that leave a lasting impression. Our rigorous testing processes ensure that every
+              solution we deliver is of the highest standard, meeting the expectations of our clients and end-users
+              alike.</span>
+            <br/><br/><span class="fw-bold"> Collaborative Approach </span>
+            <br/><span>At the heart of our success is our collaborative approach. We work closely with our clients,
+              understanding their vision and goals, to create tailor-made solutions that drive success. Our team
+              becomes an extension of yours, ensuring seamless communication and a shared commitment to
+              excellence.</span>
+            <br/><br/><span class="fw-bold"> Looking Forward </span>
+            <br/><span>As we reflect on our journey so far, we express gratitude to our clients, partners, and the talented
+              individuals who have been a part of our story. Looking forward, we are excited about the opportunities
+              that lie ahead. Whether you're embarking on a new project or seeking to enhance your existing software,
+              izyansoft is your trusted partner for innovation and success.</span>
           </div>
         </div>
       </div>
-    </section>
-    <!-- FAQ: End -->
+    </div>
+  </section>
+  <!-- FAQ: End -->
 
-    <!-- Useful features: Start -->
-    <section id="whatwedo" class="section-py">
-      <div class="container">
-        <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-          <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-          <span class="text-uppercase">We have one stop solutions</span>
-        </h6>
-        <h3 class="text-center mb-2"><span class="fw-bold">Everything you need</span> you can avail here</h3>
-        <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
-          We have a quite great experties in the following sectors.
-        </p>
-        <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
-          <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-            <div class="features-icon mb-3">
-              <img src="{% static 'light/laptop-charging.png' %}" alt="laptop charging" />
-            </div>
-            <h5 class="mb-2">Web app development</h5>
-            <p class="features-icon-description">
-              Code structure that all developers will easily understand and fall in love with.
-            </p>
+  <!-- Useful features: Start -->
+  <section id="whatwedo" class="section-py">
+    <div class="container">
+      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
+        <span class="text-uppercase">We have one stop solutions</span>
+      </h6>
+      <h3 class="text-center mb-2"><span class="fw-bold">Everything you need</span> you can avail here</h3>
+      <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
+        We have a quite great experties in the following sectors.
+      </p>
+      <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="features-icon mb-3">
+            <img src="{% static 'light/laptop-charging.png' %}" alt="laptop charging" />
           </div>
-          <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-            <div class="features-icon mb-3">
-              <img src="{% static 'light/transition-up.png' %}" alt="transition up" />
-            </div>
-            <h5 class="mb-2">Mobile app development</h5>
-            <p class="features-icon-description">
-              Free updates for the next 12 months, including new demos and features.
-            </p>
+          <h5 class="mb-2">Web app development</h5>
+          <p class="features-icon-description">
+            Crafting responsive web applications with cutting-edge tech, our team specializes in scalable, secure solutions tailored to your business objectives. We bring ideas to life, ensuring a seamless user experience.
+          </p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="features-icon mb-3">
+            <img src="{% static 'light/transition-up.png' %}" alt="transition up" />
           </div>
-          <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-            <div class="features-icon mb-3">
-              <img src="{% static 'light/edit.png' %}" alt="edit" />
-            </div>
-            <h5 class="mb-2">QA and software testing services</h5>
-            <p class="features-icon-description">
-              Start your project quickly without having to remove unnecessary features.
-            </p>
+          <h5 class="mb-2">Mobile app development</h5>
+          <p class="features-icon-description">
+            Transforming concepts into seamless mobile experiences, our skilled developers build robust, innovative applications for diverse platforms. Leveraging the latest technologies, we engage users and elevate brand presence.
+          </p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="features-icon mb-3">
+            <img src="{% static 'light/edit.png' %}" alt="edit" />
           </div>
-          <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-            <div class="features-icon mb-3">
-              <img src="{% static 'light/3d-select-solid.png' %}" alt="3d select solid" />
-            </div>
-            <h5 class="mb-2">UX, product, and design</h5>
-            <p class="features-icon-description">
-              Just change the endpoint and see your own data loaded within seconds.
-            </p>
+          <h5 class="mb-2">QA and software testing services</h5>
+          <p class="features-icon-description">
+            Ensure software reliability with comprehensive quality assurance and testing services. Our dedicated team covers functionality, performance, and security, employing industry best practices to identify and resolve defects for a flawless user experience.
+          </p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="features-icon mb-3">
+            <img src="{% static 'light/3d-select-solid.png' %}" alt="3d select solid" />
           </div>
-          <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-            <div class="features-icon mb-3">
-              <img src="{% static 'light/lifebelt.png' %}" alt="lifebelt" />
-            </div>
-            <h5 class="mb-2">Web scraping</h5>
-            <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+          <h5 class="mb-2">UX, product, and design</h5>
+          <p class="features-icon-description">
+            Elevate your digital presence with expert UX and design services, creating visually stunning, intuitive interfaces. From ideation to prototyping, our product design experts collaborate to shape engaging, user-friendly experiences that resonate.
+          </p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="features-icon mb-3">
+            <img src="{% static 'light/lifebelt.png' %}" alt="lifebelt" />
           </div>
-          <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-            <div class="features-icon mb-3">
-              <img src="{% static 'light/google-docs.png' %}" alt="google docs" />
-            </div>
-            <h5 class="mb-2">DevOps solutions</h5>
-            <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+          <h5 class="mb-2">Web scraping</h5>
+          <p class="features-icon-description">Extract valuable insights from the web with tailored solutions, providing real-time data for informed decision-making. Our experts employ advanced techniques, collecting and analyzing data to empower your business with a competitive edge.</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+          <div class="features-icon mb-3">
+            <img src="{% static 'light/google-docs.png' %}" alt="google docs" />
           </div>
+          <h5 class="mb-2">DevOps solutions</h5>
+          <p class="features-icon-description">Streamline development and operations processes with our DevOps solutions, optimizing collaboration and accelerating the software delivery lifecycle. We implement robust practices, combining automation and efficiency for your success.</p>
         </div>
       </div>
-    </section>
-    <!-- Useful features: End -->
+    </div>
+  </section>
+  <!-- Useful features: End -->
 
-    <!-- Fun facts: Start -->
-    <section id="landingFunFacts" class="section-py landing-fun-facts">
-      <div class="container">
-        <div class="row gx-0 gy-5 gx-sm-5">
-          <div class="col-md-3 col-sm-6 text-center">
-            <span class="badge badge-center rounded-pill bg-label-hover-primary fun-facts-icon mb-4"><i
-                class="tf-icons mdi mdi-land-plots mdi-36px"></i></span>
-            <h2 class="fw-bold mb-1">137+</h2>
-            <p class="fw-medium mb-0">Completed Sites</p>
-          </div>
-          <div class="col-md-3 col-sm-6 text-center">
-            <span class="badge badge-center rounded-pill bg-label-hover-success fun-facts-icon mb-4"><i
-                class="tf-icons mdi mdi-clock-outline mdi-36px"></i></span>
-            <h2 class="fw-bold mb-1">1,100+</h2>
-            <p class="fw-medium mb-0">Working Hours</p>
-          </div>
-          <div class="col-md-3 col-sm-6 text-center">
-            <span class="badge badge-center rounded-pill bg-label-hover-warning fun-facts-icon mb-4"><i
-                class="tf-icons mdi mdi-emoticon-happy-outline mdi-36px"></i></span>
-            <h2 class="fw-bold mb-1">137+</h2>
-            <p class="fw-medium mb-0">Happy Customers</p>
-          </div>
-          <div class="col-md-3 col-sm-6 text-center">
-            <span class="badge badge-center rounded-pill bg-label-hover-info fun-facts-icon mb-4"><i
-                class="tf-icons mdi mdi-medal-outline mdi-36px"></i></span>
-            <h2 class="fw-bold mb-1">23+</h2>
-            <p class="fw-medium mb-0">Awards Winning</p>
-          </div>
+  <!-- Fun facts: Start -->
+  <section id="landingFunFacts" class="section-py landing-fun-facts">
+    <div class="container">
+      <div class="row gx-0 gy-5 gx-sm-5">
+        <div class="col-md-3 col-sm-6 text-center">
+          <span class="badge badge-center rounded-pill bg-label-hover-primary fun-facts-icon mb-4"><i
+              class="tf-icons mdi mdi-land-plots mdi-36px"></i></span>
+          <h2 class="fw-bold mb-1">137+</h2>
+          <p class="fw-medium mb-0">Completed Sites</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <span class="badge badge-center rounded-pill bg-label-hover-success fun-facts-icon mb-4"><i
+              class="tf-icons mdi mdi-clock-outline mdi-36px"></i></span>
+          <h2 class="fw-bold mb-1">1,100+</h2>
+          <p class="fw-medium mb-0">Working Hours</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <span class="badge badge-center rounded-pill bg-label-hover-warning fun-facts-icon mb-4"><i
+              class="tf-icons mdi mdi-emoticon-happy-outline mdi-36px"></i></span>
+          <h2 class="fw-bold mb-1">137+</h2>
+          <p class="fw-medium mb-0">Happy Customers</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <span class="badge badge-center rounded-pill bg-label-hover-info fun-facts-icon mb-4"><i
+              class="tf-icons mdi mdi-medal-outline mdi-36px"></i></span>
+          <h2 class="fw-bold mb-1">23+</h2>
+          <p class="fw-medium mb-0">Awards Winning</p>
         </div>
       </div>
-    </section>
-    <!-- Fun facts: End -->
+    </div>
+  </section>
+  <!-- Fun facts: End -->
 
-    <!-- Real customers reviews: Start -->
-    <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
-      <div class="container">
-        <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-          <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-          <span class="text-uppercase">proud to have</span>
-        </h6>
-        <h3 class="text-center mb-2"><span class="fw-bold">Success stories</span> from clients</h3>
-        <p class="text-center fw-medium mb-3 mb-md-5">See what our customers have to say about their experience.</p>
-      </div>
-      <div class="swiper-reviews-carousel overflow-hidden mb-5 pt-4">
-        <div class="swiper" id="swiper-reviews">
-          <div class="swiper-wrapper">
-            {% for testimonial in testimonials %}
-            <div class="swiper-slide">
-              <div class="card h-100">
-                <div class="card-body text-body d-flex flex-column justify-content-between text-center">
-                  <div class="mb-3">
-                    <img src="{{ MEDIA_URL }}/{{testimonial.company_logo}}" alt="client logo"
-                      class="client-logo img-fluid" />
-                  </div>
-                  <p>
-                    “{{testimonial.content}}”
-                  </p>
-                  <div class="text-warning mb-3">
-                    {% for star in "*****" %}
-                    {% if forloop.counter <= testimonial.rating %} <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                      {% else %}
-                      <i class="tf-icons mdi mdi-star-outline mdi-24px"></i>
-                      {% endif %}
-                      {% endfor %}
-
-                  </div>
-                  <div>
-                    <h6 class="mb-1">{{testimonial.giver_name}}</h6>
-                    <p class="mb-0">{{testimonial.giver_designation}} at {{testimonial.company_name}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      <hr class="m-0" />
-      <div class="container">
-        <div class="swiper-logo-carousel py-4 my-lg-2">
-          <div class="swiper" id="swiper-clients-logos">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="{% static 'light/logo-1-light.png' %}" alt="client logo" class="client-logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="{% static 'light/logo-2-light.png' %}" alt="client logo" class="client-logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="{% static 'light/logo-3-light.png' %}" alt="client logo" class="client-logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="{% static 'light/logo-4-light.png' %}" alt="client logo" class="client-logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="{% static 'light/logo-5-light.png' %}" alt="client logo" class="client-logo" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Real customers reviews: End -->
-
-    <!-- Contact Us: Start -->
-    <section id="landingContact" class="section-py bg-body landing-contact">
-      <div class="container bg-icon-left">
-        <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-          <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-          <span class="text-uppercase">contact us</span>
-        </h6>
-        <h3 class="text-center mb-2"><span class="fw-bold">Lets work</span> together</h3>
-        <p class="text-center fw-medium mb-3 mb-md-5 pb-3">Submit us your requirements below</p>
-        <div class="row gy-4">
-          <div class="col-lg-5">
+  <!-- Real customers reviews: Start -->
+  <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
+    <div class="container">
+      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
+        <span class="text-uppercase">proud to have</span>
+      </h6>
+      <h3 class="text-center mb-2"><span class="fw-bold">Success stories</span> from clients</h3>
+      <p class="text-center fw-medium mb-3 mb-md-5">See what our customers have to say about their experience.</p>
+    </div>
+    <div class="swiper-reviews-carousel overflow-hidden mb-5 pt-4">
+      <div class="swiper" id="swiper-reviews">
+        <div class="swiper-wrapper">
+          {% for testimonial in testimonials %}
+          <div class="swiper-slide">
             <div class="card h-100">
-              <div class="bg-primary rounded text-white card-body">
-                <img src="{% static 'light/let%E2%80%99s-contact.png' %}" alt="let’s contact" class="w-100 mb-2 pb-1" />
-                <p class="display-6 mb-4">Next steps after requirements submission </p>
-                <p class="mb-0">1. You will get a response from our business development team within two working days.
-                </p>
-                <p class="mb-0">2. Engage in a discovery session to delve into your project requirements.</p>
-                <p class="mb-0">3. Rest assured, all shared information is safeguarded under the mNDA.</p>
-                <p class="mb-0">4. Our technical and business development teams assess your project scope and present
-                  the optimal approach in a proposal.</p>
-                <p class="mb-0">5. Finalize the process by signing a software development agreement, aligning with the
-                  mutually agreed terms in the proposal.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="mb-4">Share your project requirements with our experts</h5>
-                <div class="text-danger" id="contact_us_errors"></div>
-                <div class="text-success" id="contact_us_success_msg"></div>
-                <br />
-                <form id="contact_us_form">
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <select name="service" id="service" class="form-control">
-                          <option value="">What service are you looking for? *</option>
-                          <option value="Web App Development">Web App Development</option>
-                          <option value="Mobile App Development">Mobile App Development</option>
-                          <option value="Education Technology">Education Technology</option>
-                          <option value="Web Scraping">Web Scraping</option>
-                          <option value="Data and Artificial Intelligence">Data and Artificial Intelligence</option>
-                          <option value="QA and Software Testing">QA and Software Testing</option>
-                          <option value="UX, Product, and Design">UX, Product, and Design</option>
-                          <option value="MVP for Startups">MVP for Startups</option>
-                          <option value="Enterprise Software Development">Enterprise Software Development</option>
-                          <option value="Team Augmentation">Team Augmentation</option>
-                          <option value="DevOps Solutions">DevOps Solutions</option>
-                        </select>
-                        <label for="service">Service you need *</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input type="text" class="form-control" id="org-name" placeholder="Allied Groups" />
-                        <label for="org-name">Bussniess name</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input type="email" class="form-control" id="email" placeholder="johndoe99@gmail.com" />
-                        <label for="email">Email address</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input type="text" class="form-control" id="fullname" placeholder="John Doe" />
-                        <label for="fullname">Full name</label>
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-floating form-floating-outline">
-                        <textarea class="form-control h-px-200"
-                          placeholder="Please add your project's requirements here" aria-label="requirements"
-                          id="requirements"></textarea>
-                        <label for="requirements">Requirements</label>
-                      </div>
-                    </div>
-
-                  </div>
-                  <button onclick="submitContactUsForm()" type="button" class="btn btn-primary mt-3">Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Us: End -->
-  </div>
-
-  <!-- Content: End -->
-
-
-  <!-- Footer: Start -->
-
-
-  <!-- Footer: Start -->
-  <footer class="landing-footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gx-0 gy-4 g-md-5">
-          <div class="col-lg-4">
-            <a href="/" class="app-brand-link mb-4">
-              <span class="app-brand-text demo footer-link fw-semibold">About IzyanSoft</span>
-            </a>
-
-            <p>
-              Welcome to IzyanSoft, where innovation meets expertise. As a leading force in the realm of software
-              solutions, we are dedicated to empowering businesses with cutting-edge technologies.
-            </p>
-            <form>
-              <div class="d-flex mt-2 gap-3">
-                <div class="form-floating form-floating-outline w-px-250">
-                  <input type="text" class="form-control bg-transparent" id="newsletter-email"
-                    placeholder="Your email" />
-                  <label for="newsletter-email">Subscribe to newsletter</label>
+              <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                <div class="mb-3">
+                  <img src="{{ MEDIA_URL }}/{{testimonial.company_logo}}" alt="client logo"
+                    class="client-logo img-fluid" />
                 </div>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
+                <p>
+                  “{{testimonial.content}}”
+                </p>
+                <div class="text-warning mb-3">
+                  {% for star in "*****" %}
+                  {% if forloop.counter <= testimonial.rating %} <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    {% else %}
+                    <i class="tf-icons mdi mdi-star-outline mdi-24px"></i>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+                <div>
+                  <h6 class="mb-1">{{testimonial.giver_name}}</h6>
+                  <p class="mb-0">{{testimonial.giver_designation}} at {{testimonial.company_name}}</p>
+                </div>
               </div>
-            </form>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <h6 class="footer-title mb-4">Have a project in mind? Let's talk!</h6>
-            For Enquiries: meetus@izyansoft.com
-            <br />
-            For Job Oppertunities: hr@izyansoft.com
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <h6 class="footer-title mb-4">Important Links</h6>
-            <p><a href="/#landingFAQ">About Us</a></p>
-            <p><a href="/#landingContact">Contact Us</a></p>
-
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <h6 class="footer-title mb-4">Head Quarters</h6>
-            <p>
-              214-A Defence Lahore, Punjab 54000
-            </p>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <hr class="m-0" />
+    <div class="container">
+      <div class="swiper-logo-carousel py-4 my-lg-2">
+        <div class="swiper" id="swiper-clients-logos">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="{% static 'light/logo-1-light.png' %}" alt="client logo" class="client-logo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'light/logo-2-light.png' %}" alt="client logo" class="client-logo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'light/logo-3-light.png' %}" alt="client logo" class="client-logo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'light/logo-4-light.png' %}" alt="client logo" class="client-logo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="{% static 'light/logo-5-light.png' %}" alt="client logo" class="client-logo" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom py-3">
-      <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
-        <div class="mb-2 mb-md-0">
-          <span class="footer-text">©
-            <script>
-              document.write(new Date().getFullYear());
+  </section>
+  <!-- Real customers reviews: End -->
 
-            </script>
-            IzyanSoft. All Rights Reserved.
-          </span>
+  <!-- Contact Us: Start -->
+  <section id="landingContact" class="section-py bg-body landing-contact">
+    <div class="container bg-icon-left">
+      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
+        <span class="text-uppercase">contact us</span>
+      </h6>
+      <h3 class="text-center mb-2"><span class="fw-bold">Lets work</span> together</h3>
+      <p class="text-center fw-medium mb-3 mb-md-5 pb-3">Submit us your requirements below</p>
+      <div class="row gy-4">
+        <div class="col-lg-5">
+          <div class="card h-100">
+            <div class="bg-primary rounded text-white card-body">
+              <img src="{% static 'light/let%E2%80%99s-contact.png' %}" alt="let’s contact" class="w-100 mb-2 pb-1" />
+              <p class="display-6 mb-4">Next steps after requirements submission </p>
+              <p class="mb-0">1. You will get a response from our business development team within two working days.
+              </p>
+              <p class="mb-0">2. Engage in a discovery session to delve into your project requirements.</p>
+              <p class="mb-0">3. Rest assured, all shared information is safeguarded under the mNDA.</p>
+              <p class="mb-0">4. Our technical and business development teams assess your project scope and present
+                the optimal approach in a proposal.</p>
+              <p class="mb-0">5. Finalize the process by signing a software development agreement, aligning with the
+                mutually agreed terms in the proposal.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          Join our vibrant communinty: &nbsp; &nbsp;
-          <a href="https://www.linkedin.com/company/85667022" class="footer-link me-2" target="_blank"><i
-              class="mdi mdi-linkedin"></i></a>
-          <a href="https://web.facebook.com/izyansoft" class="footer-link me-2" target="_blank"><i
-              class="mdi mdi-facebook"></i></a>
+        <div class="col-lg-7">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="mb-4">Share your project requirements with our experts</h5>
+              <div class="text-danger" id="contact_us_errors"></div>
+              <div class="text-success" id="contact_us_success_msg"></div>
+              <br />
+              <form id="contact_us_form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating form-floating-outline">
+                      <select name="service" id="service" class="form-control">
+                        <option value="">What service are you looking for? *</option>
+                        <option value="Web App Development">Web App Development</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="Education Technology">Education Technology</option>
+                        <option value="Web Scraping">Web Scraping</option>
+                        <option value="Data and Artificial Intelligence">Data and Artificial Intelligence</option>
+                        <option value="QA and Software Testing">QA and Software Testing</option>
+                        <option value="UX, Product, and Design">UX, Product, and Design</option>
+                        <option value="MVP for Startups">MVP for Startups</option>
+                        <option value="Enterprise Software Development">Enterprise Software Development</option>
+                        <option value="Team Augmentation">Team Augmentation</option>
+                        <option value="DevOps Solutions">DevOps Solutions</option>
+                      </select>
+                      <label for="service">Service you need *</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" class="form-control" id="org-name" placeholder="Allied Groups" />
+                      <label for="org-name">Bussniess name</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating form-floating-outline">
+                      <input type="email" class="form-control" id="email" placeholder="johndoe99@gmail.com" />
+                      <label for="email">Email address</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" class="form-control" id="fullname" placeholder="John Doe" />
+                      <label for="fullname">Full name</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-floating form-floating-outline">
+                      <textarea class="form-control h-px-200"
+                        placeholder="Please add your project's requirements here" aria-label="requirements"
+                        id="requirements"></textarea>
+                      <label for="requirements">Requirements</label>
+                    </div>
+                  </div>
+
+                </div>
+                <button onclick="submitContactUsForm()" type="button" class="btn btn-primary mt-3">Submit</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- Footer: End -->
+  </section>
+  <!-- Contact Us: End -->
+</div>
 
-  <!-- Footer: End -->
+<!-- Content: End -->
 
-  <!-- JavaScript for AJAX submission -->
-  <script>
-
-    // Function to get CSRF token from cookie
-    function getCookie(name) {
-      var cookieValue = null;
-      if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i].trim();
-          // Check if the cookie name matches with the desired one
-          if (cookie.substring(0, name.length + 1) === (name + '=')) {
-            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-            break;
-          }
-        }
-      }
-      return cookieValue;
-    }
-
-
-    function submitContactUsForm() {
-      document.getElementById('contact_us_errors').innerHTML = '';
-      document.getElementById('contact_us_success_msg').innerHTML = '';
-
-      // Get form values
-      var service = document.getElementById('service').value;
-      var orgName = document.getElementById('org-name').value;
-      var email = document.getElementById('email').value;
-      var fullName = document.getElementById('fullname').value;
-      var requirements = document.getElementById('requirements').value;
-
-      // Validate form fields
-      var errors = [];
-      if (!service) errors.push('Please select a service.');
-      if (!orgName) errors.push('Please provide a business name.');
-      if (!email) errors.push('Please provide an email address.');
-      if (!fullName) errors.push('Please provide your full name.');
-      if (!requirements) errors.push('Please add your project requirements.');
-      // Email validation
-      var emailRegex = /^\S+@\S+\.\S+$/;
-      if (!email || !emailRegex.test(email)) {
-        errors.push('Please provide a valid email address.');
-      }
-
-      // Display errors if any
-      if (errors.length > 0) {
-        var errorList = document.createElement('ul');
-        errors.forEach(function (error) {
-          var listItem = document.createElement('li');
-          listItem.textContent = error;
-          errorList.appendChild(listItem);
-        });
-        document.getElementById('contact_us_errors').appendChild(errorList);
-      } else {
-        // Get the CSRF token from the cookie
-        var csrftoken = getCookie('csrftoken');
-        var formData = {
-          service: document.getElementById('service').value,
-          org_name: document.getElementById('org-name').value,
-          email: document.getElementById('email').value,
-          full_name: document.getElementById('fullname').value,
-          requirements: document.getElementById('requirements').value,
-          csrfmiddlewaretoken: csrftoken
-        };
-        $.ajax({
-          type: 'POST',
-          url: '{% url "submit_contact_us_form" %}',
-          data: formData,
-          success: function (response) {
-            // Handle success response
-            console.log(response);
-          },
-          error: function (error) {
-            // Handle error response
-            console.log(error.responseJSON);
-          },
-        });
-        $('#contact_us_form').trigger('reset')
-        $('#contact_us_success_msg').html('Your requirements submitted successfully, our business development team would contact you soon.')
-      }
-    }
-  </script>
-
-  <!--Vendors Javascript-->
-  <script src="{% static 'light/dropdown-hover.js' %}"></script>
-  <script src="{% static 'light/mega-dropdown.js' %}"></script>
-  <script src="{% static 'light/popper.js' %}"></script>
-  <script src="{% static 'light/bootstrap.js' %}"></script>
-  <script src="{% static 'light/node-waves.js' %}"></script>
-  <script src="{% static 'light/front-main.js' %}"></script>
-
-
-  <!--Vendors Javascript-->
-
-
-  <script src="{% static 'light/nouislider.js' %}"></script>
-  <script src="{% static 'light/swiper.js' %}"></script>
-
-
-  <!--Page Javascript-->
-
-
-  <script src="{% static 'light/front-page-landing.js' %}"></script>
-
-
-</body>
-
-</html>
+{% endblock %}
