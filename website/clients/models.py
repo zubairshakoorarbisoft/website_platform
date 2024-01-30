@@ -30,3 +30,14 @@ class Client(models.Model):
     address1 = models.CharField(max_length=100, null=True)
     address2 = models.CharField(max_length=100, null=True)
     phone_no = models.CharField(max_length=20, null=True)
+
+
+class ClientQuery(models.Model):
+    service_name = models.CharField(max_length=100, null=False)
+    company_name = models.FileField(max_length=100, null=False)
+    full_name = models.CharField(max_length=100, null=True)
+    email = models.EmailField(null=True)
+    requirements = models.CharField(max_length=10000, null=True)
+    active = models.BooleanField(default=True)
+
+

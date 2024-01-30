@@ -20,7 +20,12 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [path("admin/", admin.site.urls), path("", include("home.urls"))]
+urlpatterns = [
+    path("", include("home.urls")),
+    path("admin/", admin.site.urls),
+    path("portal/jobs/", include("jobs.urls")),
+    path("portal/dashboards/", include("dashboards.urls")),
+]
 
 # Serve media files during development
 if settings.DEBUG:
