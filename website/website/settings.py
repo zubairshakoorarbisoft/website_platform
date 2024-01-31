@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-pdqhj&=9yp(0ny&$ml-byk93lazx-&h^=t1+=9ab=zoktkw9m^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.izyansoft.com", "localhost"]
 
 MEDIA_URL = "/media/uploads/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media", "uploads")
@@ -35,8 +35,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media", "uploads")
 # Application definition
 
 INSTALLED_APPS = [
-    'dashboards.apps.DashboardsConfig',
-    'jobs.apps.JobsConfig',
+    "dashboards.apps.DashboardsConfig",
+    "jobs.apps.JobsConfig",
     "clients.apps.ClientsConfig",
     "home.apps.HomeConfig",
     "django.contrib.admin",
@@ -124,6 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+# The absolute path to the directory where collectstatic will collect static files.
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     BASE_DIR / "website/static",
