@@ -2,351 +2,687 @@
 {% load static %}
 
 {% block content %}
-<!-- Content:Start -->
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="d-flex align-items-center">
 
-<div data-bs-spy="scroll" class="scrollspy-example">
-  <!-- Hero: Start -->
-  <section id="landingTop" class="landing-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h1>Creating websites that make you stop & stare</h1>
+        <h2>Accusantium quam, aliquam ultricies eget tempor id, aliquam eget nibh et. Maecen aliquam, risus at semper. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum.</h2>
+        <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+        <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
     <div class="container">
-      <div class="hero-text-box text-center">
-        <h1 class="text-primary hero-title">Helping the world with impactful software solutions</h1>
-        <h2 class="h6 mb-4 pb-1 lh-lg">
-          Enabling growth through smart software solutions<br />Your success, our mission – tech solutions that
-          deliver
-        </h2>
-        <a href="/#landingContact" class="btn btn-primary">Let’s get started with your project</a>
-      </div>
-      <div class="position-relative hero-animation-img">
-        <a href="/materio-html-django-admin-template/demo-1/dashboard/crm/" target="_blank">
-          <div class="hero-dashboard-img text-center">
-            <img src="{% static 'light/izyansoft-img-banner-01.png' %}" alt="hero dashboard" class="animation-img"
-              data-speed="2" />
-          </div>
-          <div class="position-absolute hero-elements-img">
-            <!-- <img src="{% static 'light/banner-imag-02 copy.png' %}" alt="hero elements" class="animation-img"
-              data-speed="4" /> -->
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- Hero: End -->
 
-  <!-- FAQ: Start -->
-  <section id="landingFAQ" class="section-py bg-body landing-faq" style="margin-top: 265px;">
-    <div class="container bg-icon-right">
-      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-      </h6>
-      <h3 class="text-center mb-2">Why<span class="fw-bold"> izyansoft</span></h3>
-      <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
-        Choosing us would be a pleasure for us to make your business smart and robust
-      </p>
-      <div class="row gy-5">
-        <div class="col-lg-12">
-          <div>
-            <span class="fw-bold"> Welcome to izyansoft - Crafting Innovative Solutions Since 2015 </span>
-            <br/><span>At izyansoft, we take pride in our journey as a leading software agency, dedicated to delivering
-              cutting-edge solutions to our clients worldwide. With a rich history spanning seven years, we have
-              consistently pushed the boundaries of technology, providing a range of services that cater to the
-              diverse needs of businesses across industries.</span>
-            <br/><br/><span class="fw-bold"> Our Expertise </span>
-            <br/><span>Web App Development to Mobile App Development, our team of skilled professionals excels in
-              transforming ideas into robust and scalable software solutions. Our proficiency extends to specialized
-              domains such as Education Technology, Web Scraping, Data and Artificial Intelligence, QA and Software
-              Testing, UX, Product, and Design. Whether you are a startup looking to build an MVP or an established
-              enterprise in need of customized software, we have the expertise to meet your requirements.</span>
-            <br/><br/><span class="fw-bold"> Commitment to Quality </span>
-            <br/><span>What sets us apart is our unwavering commitment to quality. We believe in creating not just software
-              but experiences that leave a lasting impression. Our rigorous testing processes ensure that every
-              solution we deliver is of the highest standard, meeting the expectations of our clients and end-users
-              alike.</span>
-            <br/><br/><span class="fw-bold"> Collaborative Approach </span>
-            <br/><span>At the heart of our success is our collaborative approach. We work closely with our clients,
-              understanding their vision and goals, to create tailor-made solutions that drive success. Our team
-              becomes an extension of yours, ensuring seamless communication and a shared commitment to
-              excellence.</span>
-            <br/><br/><span class="fw-bold"> Looking Forward </span>
-            <br/><span>As we reflect on our journey so far, we express gratitude to our clients, partners, and the talented
-              individuals who have been a part of our story. Looking forward, we are excited about the opportunities
-              that lie ahead. Whether you're embarking on a new project or seeking to enhance your existing software,
-              izyansoft is your trusted partner for innovation and success.</span>
+      <div class="row">
+        <div class="col-xl-5 col-lg-6 d-flex justify-content-center video-box align-items-stretch position-relative">
+          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+        </div>
+
+        <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+          <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
+          <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
           </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-gift"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-atom"></i></div>
+            <h4 class="title"><a href="">Dine Pad</a></h4>
+            <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
-  <!-- FAQ: End -->
 
-  <!-- Useful features: Start -->
-  <section id="whatwedo" class="section-py">
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts">
     <div class="container">
-      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-        <span class="text-uppercase">We have one stop solutions</span>
-      </h6>
-      <h3 class="text-center mb-2"><span class="fw-bold">Everything you need</span> you can avail here</h3>
-      <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
-        We have a quite great experties in the following sectors.
-      </p>
-      <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
-        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-          <div class="features-icon mb-3">
-            <img src="{% static 'light/laptop-charging.png' %}" alt="laptop charging" />
-          </div>
-          <h5 class="mb-2">Web app development</h5>
-          <p class="features-icon-description">
-            Crafting responsive web applications with cutting-edge tech, our team specializes in scalable, secure solutions tailored to your business objectives. We bring ideas to life, ensuring a seamless user experience.
-          </p>
+
+      <div class="text-center title">
+        <h3>What we have achieved so far</h3>
+        <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
+      </div>
+
+      <div class="row counters position-relative">
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Clients</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-          <div class="features-icon mb-3">
-            <img src="{% static 'light/transition-up.png' %}" alt="transition up" />
-          </div>
-          <h5 class="mb-2">Mobile app development</h5>
-          <p class="features-icon-description">
-            Transforming concepts into seamless mobile experiences, our skilled developers build robust, innovative applications for diverse platforms. Leveraging the latest technologies, we engage users and elevate brand presence.
-          </p>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Projects</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-          <div class="features-icon mb-3">
-            <img src="{% static 'light/edit.png' %}" alt="edit" />
-          </div>
-          <h5 class="mb-2">QA and software testing services</h5>
-          <p class="features-icon-description">
-            Ensure software reliability with comprehensive quality assurance and testing services. Our dedicated team covers functionality, performance, and security, employing industry best practices to identify and resolve defects for a flawless user experience.
-          </p>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Hours Of Support</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-          <div class="features-icon mb-3">
-            <img src="{% static 'light/3d-select-solid.png' %}" alt="3d select solid" />
-          </div>
-          <h5 class="mb-2">UX, product, and design</h5>
-          <p class="features-icon-description">
-            Elevate your digital presence with expert UX and design services, creating visually stunning, intuitive interfaces. From ideation to prototyping, our product design experts collaborate to shape engaging, user-friendly experiences that resonate.
-          </p>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Hard Workers</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-          <div class="features-icon mb-3">
-            <img src="{% static 'light/lifebelt.png' %}" alt="lifebelt" />
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+  <!-- ======= Clients Section ======= -->
+  <section id="clients" class="clients">
+    <div class="container">
+
+      <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
           </div>
-          <h5 class="mb-2">Web scraping</h5>
-          <p class="features-icon-description">Extract valuable insights from the web with tailored solutions, providing real-time data for informed decision-making. Our experts employ advanced techniques, collecting and analyzing data to empower your business with a competitive edge.</p>
         </div>
-        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-          <div class="features-icon mb-3">
-            <img src="{% static 'light/google-docs.png' %}" alt="google docs" />
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
           </div>
-          <h5 class="mb-2">DevOps solutions</h5>
-          <p class="features-icon-description">Streamline development and operations processes with our DevOps solutions, optimizing collaboration and accelerating the software delivery lifecycle. We implement robust practices, combining automation and efficiency for your success.</p>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <div class="client-logo">
+            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Clients Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-cash-stack" style="color: #ff689b;"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-calendar4-week" style="color: #e9bf06;"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-chat-text" style="color: #3fcdc7;"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-credit-card-2-front" style="color:#41cf2e;"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+          <div class="icon-box">
+            <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Useful features: End -->
 
-  <!-- Fun facts: Start -->
-  <section id="landingFunFacts" class="section-py landing-fun-facts">
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
     <div class="container">
-      <div class="row gx-0 gy-5 gx-sm-5">
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge badge-center rounded-pill bg-label-hover-primary fun-facts-icon mb-4"><i
-              class="tf-icons mdi mdi-land-plots mdi-36px"></i></span>
-          <h2 class="fw-bold mb-1">137+</h2>
-          <p class="fw-medium mb-0">Completed Sites</p>
-        </div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge badge-center rounded-pill bg-label-hover-success fun-facts-icon mb-4"><i
-              class="tf-icons mdi mdi-clock-outline mdi-36px"></i></span>
-          <h2 class="fw-bold mb-1">1,100+</h2>
-          <p class="fw-medium mb-0">Working Hours</p>
-        </div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge badge-center rounded-pill bg-label-hover-warning fun-facts-icon mb-4"><i
-              class="tf-icons mdi mdi-emoticon-happy-outline mdi-36px"></i></span>
-          <h2 class="fw-bold mb-1">137+</h2>
-          <p class="fw-medium mb-0">Happy Customers</p>
-        </div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge badge-center rounded-pill bg-label-hover-info fun-facts-icon mb-4"><i
-              class="tf-icons mdi mdi-medal-outline mdi-36px"></i></span>
-          <h2 class="fw-bold mb-1">23+</h2>
-          <p class="fw-medium mb-0">Awards Winning</p>
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Fun facts: End -->
 
-  <!-- Real customers reviews: Start -->
-  <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
-    <div class="container">
-      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-        <span class="text-uppercase">proud to have</span>
-      </h6>
-      <h3 class="text-center mb-2"><span class="fw-bold">Success stories</span> from clients</h3>
-      <p class="text-center fw-medium mb-3 mb-md-5">See what our customers have to say about their experience.</p>
-    </div>
-    <div class="swiper-reviews-carousel overflow-hidden mb-5 pt-4">
-      <div class="swiper" id="swiper-reviews">
-        <div class="swiper-wrapper">
-          {% for testimonial in testimonials %}
-          <div class="swiper-slide">
-            <div class="card h-100">
-              <div class="card-body text-body d-flex flex-column justify-content-between text-center">
-                <div class="mb-3">
-                  <img src="{{ MEDIA_URL }}/{{testimonial.company_logo}}" alt="client logo"
-                    class="client-logo img-fluid" />
-                </div>
-                <p>
-                  “{{testimonial.content}}”
-                </p>
-                <div class="text-warning mb-3">
-                  {% for star in "*****" %}
-                  {% if forloop.counter <= testimonial.rating %} <i class="tf-icons mdi mdi-star mdi-24px"></i>
-                    {% else %}
-                    <i class="tf-icons mdi mdi-star-outline mdi-24px"></i>
-                    {% endif %}
-                    {% endfor %}
+      <div class="row portfolio-container">
 
-                </div>
-                <div>
-                  <h6 class="mb-1">{{testimonial.giver_name}}</h6>
-                  <p class="mb-0">{{testimonial.giver_designation}} at {{testimonial.company_name}}</p>
-                </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
-          {% endfor %}
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container position-relative">
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
         </div>
         <div class="swiper-pagination"></div>
       </div>
+
     </div>
-    <hr class="m-0" />
+  </section><!-- End Testimonials Section -->
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team section-bg">
     <div class="container">
-      <div class="swiper-logo-carousel py-4 my-lg-2">
-        <div class="swiper" id="swiper-clients-logos">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="{% static 'light/logo-1-light.png' %}" alt="client logo" class="client-logo" />
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static 'light/logo-2-light.png' %}" alt="client logo" class="client-logo" />
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static 'light/logo-3-light.png' %}" alt="client logo" class="client-logo" />
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static 'light/logo-4-light.png' %}" alt="client logo" class="client-logo" />
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static 'light/logo-5-light.png' %}" alt="client logo" class="client-logo" />
-            </div>
-          </div>
-        </div>
+
+      <div class="section-title">
+        <h2>Team</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
-    </div>
-  </section>
-  <!-- Real customers reviews: End -->
 
-  <!-- Contact Us: Start -->
-  <section id="landingContact" class="section-py bg-body landing-contact">
-    <div class="container bg-icon-left">
-      <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
-        <img src="{% static 'light/section-tilte-icon.png' %}" alt="section title icon" class="me-2" />
-        <span class="text-uppercase">contact us</span>
-      </h6>
-      <h3 class="text-center mb-2"><span class="fw-bold">Lets work</span> together</h3>
-      <p class="text-center fw-medium mb-3 mb-md-5 pb-3">Submit us your requirements below</p>
-      <div class="row gy-4">
-        <div class="col-lg-5">
-          <div class="card h-100">
-            <div class="bg-primary rounded text-white card-body">
-              <img src="{% static 'light/let%E2%80%99s-contact.png' %}" alt="let’s contact" class="w-100 mb-2 pb-1" />
-              <p class="display-6 mb-4">Next steps after requirements submission </p>
-              <p class="mb-0">1. You will get a response from our business development team within two working days.
-              </p>
-              <p class="mb-0">2. Engage in a discovery session to delve into your project requirements.</p>
-              <p class="mb-0">3. Rest assured, all shared information is safeguarded under the mNDA.</p>
-              <p class="mb-0">4. Our technical and business development teams assess your project scope and present
-                the optimal approach in a proposal.</p>
-              <p class="mb-0">5. Finalize the process by signing a software development agreement, aligning with the
-                mutually agreed terms in the proposal.</p>
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <div class="member-img">
+              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
             </div>
           </div>
         </div>
-        <div class="col-lg-7">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="mb-4">Share your project requirements with our experts</h5>
-              <div class="text-danger" id="contact_us_errors"></div>
-              <div class="text-success" id="contact_us_success_msg"></div>
-              <br />
-              <form id="contact_us_form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-floating form-floating-outline">
-                      <select name="service" id="service" class="form-control">
-                        <option value="">What service are you looking for? *</option>
-                        <option value="Web App Development">Web App Development</option>
-                        <option value="Mobile App Development">Mobile App Development</option>
-                        <option value="Education Technology">Education Technology</option>
-                        <option value="Web Scraping">Web Scraping</option>
-                        <option value="Data and Artificial Intelligence">Data and Artificial Intelligence</option>
-                        <option value="QA and Software Testing">QA and Software Testing</option>
-                        <option value="UX, Product, and Design">UX, Product, and Design</option>
-                        <option value="MVP for Startups">MVP for Startups</option>
-                        <option value="Enterprise Software Development">Enterprise Software Development</option>
-                        <option value="Team Augmentation">Team Augmentation</option>
-                        <option value="DevOps Solutions">DevOps Solutions</option>
-                      </select>
-                      <label for="service">Service you need *</label>
-                    </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="form-floating form-floating-outline">
-                      <input type="text" class="form-control" id="org-name" placeholder="Allied Groups" />
-                      <label for="org-name">Bussniess name</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-floating form-floating-outline">
-                      <input type="email" class="form-control" id="email" placeholder="johndoe99@gmail.com" />
-                      <label for="email">Email address</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-floating form-floating-outline">
-                      <input type="text" class="form-control" id="fullname" placeholder="John Doe" />
-                      <label for="fullname">Full name</label>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-floating form-floating-outline">
-                      <textarea class="form-control h-px-200"
-                        placeholder="Please add your project's requirements here" aria-label="requirements"
-                        id="requirements"></textarea>
-                      <label for="requirements">Requirements</label>
-                    </div>
-                  </div>
-
-                </div>
-                <button onclick="submitContactUsForm()" type="button" class="btn btn-primary mt-3">Submit</button>
-              </form>
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <div class="member-img">
+              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Sarah Jhonson</h4>
+              <span>Product Manager</span>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <div class="member-img">
+              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <div class="member-img">
+              <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
-  </section>
-  <!-- Contact Us: End -->
-</div>
+  </section><!-- End Team Section -->
 
-<!-- Content: End -->
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
+    <div class="container">
 
+      <div class="section-title">
+        <h2>Gallery</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row no-gutters">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-1.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-2.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-3.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-4.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-5.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-6.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-7.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="assets/img/gallery/gallery-8.jpg" class="galleery-lightbox" data-gallery="gallery-item">
+              <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>info@example.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+1 5589 55488 55s</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
 {% endblock %}
