@@ -1,0 +1,9 @@
+{% extends 'admin-portal-base.html' %}
+
+{% block content %}
+
+{% for i in testimonials %}
+  <h2> {{i.company_name}} </h2>
+{% endfor %}
+
+{% endblock%}

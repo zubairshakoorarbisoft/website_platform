@@ -21,7 +21,7 @@ class Testimonial(models.Model):
         validators=[MaxValueValidator(5), MinValueValidator(1)]
     )
 
-
+#Skip thi model f0or now
 class Client(models.Model):
     company_name = models.CharField(max_length=100, null=False)
     company_logo = models.FileField(null=False)
@@ -31,7 +31,7 @@ class Client(models.Model):
     address2 = models.CharField(max_length=100, null=True)
     phone_no = models.CharField(max_length=20, null=True)
 
-
+#Skip thi model f0or now
 class ClientQuery(models.Model):
     service_name = models.CharField(max_length=100, null=False)
     company_name = models.FileField(max_length=100, null=False)
