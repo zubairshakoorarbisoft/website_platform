@@ -1,15 +1,19 @@
 from django.urls import path
 from .views import(
-    TestimonialListView
+    TestimonialListView,
+    CreateTestimonialView,
+    TestimonialDetailView,
+    EditTestimonialView,
+    DeleteTestimonialView
     
 ) 
 
 urlpatterns = [
     path('', TestimonialListView.as_view(), name='testimonial_list'),
-    # path('create/', CreateJobView.as_view(), name='create_job'),
-    # path('detail/<int:pk>', JobDetailView.as_view(), name='job_detail'),
-    # path('edit/<int:pk>/', EditJobView.as_view(), name='edit_job'),
-    # path('delete/<int:pk>/', DeleteJobView.as_view(), name='delete_job'),
+    path('create/', CreateTestimonialView.as_view(), name='create_testimonial'),
+    path('detail/<int:pk>', TestimonialDetailView.as_view(), name='testimonial_detail'),
+    path('edit/<int:pk>/', EditTestimonialView.as_view(), name='edit_testimonial'),
+    path('delete/<int:pk>/', DeleteTestimonialView.as_view(), name='delete_testimonial'),
 ]
 
 
