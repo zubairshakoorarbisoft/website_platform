@@ -30,6 +30,7 @@ class TechnologyListView(ListView):
 class CreateTechnologyView(CreateView):
     model = Technology
     form_class = TechnologyForm
+    template_name= "technologies/technologies_form.html"
     success_url = reverse_lazy('technology_list')
     def form_valid(self, form):
         messages.success(self.request, 'technology added successfully.')
@@ -40,7 +41,6 @@ class TechnologyDetailView(DetailView):
     model = Technology
     context_object_name = 'technologys'
     template_name = 'technologies/technologies_detail.html'
-
     def get(self, request, pk):
         technologys = get_object_or_404(Technology, pk=pk)
 
@@ -53,6 +53,7 @@ class TechnologyDetailView(DetailView):
 class EditTechnologyView(UpdateView):
     model = Technology
     form_class = TechnologyForm
+    template_name= "technologies/technologies_form.html"
     success_url = reverse_lazy('technology_list')
     def form_valid(self, form):
         messages.success(self.request, 'technology updated successfully.')
