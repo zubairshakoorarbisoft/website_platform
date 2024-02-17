@@ -41,9 +41,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'dashboards'%}">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    {% comment %} <i class="fas fa-laugh-wink"></i> {% endcomment %}
                 </div>
-                <div class="sidebar-brand-text mx-3">izyansoft <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">IzyanSoft <sup>Administration</sup></div>
             </a>
 
             <!-- Divider -->
@@ -54,17 +54,29 @@
                 Modules
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Items - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Careers</span>
+                </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{% url 'job_list' %}">Jobs</a>
+                    </div>
+                </div>
+            </li>
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Careers</span>
+                    <span>Our Clients</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Components</h6>
-                        <a class="collapse-item" href="{% url 'job_list' %}">Jobs</a>
+                        <a class="collapse-item" href="{% url 'testimonial_list' %}">Testimonials</a>
                     </div>
                 </div>
             </li>
@@ -121,9 +133,16 @@
                             </div>
                         </li>
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link" href="#" role="button">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">visit site</span>
+                                <i class="fas fa-location-arrow fa-xsm fa-fw mr-2 text-gray-400"></i>
+                            </a>        
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

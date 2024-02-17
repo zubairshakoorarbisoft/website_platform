@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'dashboards.apps.DashboardsConfig',
     'jobs.apps.JobsConfig',
     "clients.apps.ClientsConfig",
+    "products.apps.ProductsConfig",
     "home.apps.HomeConfig",
     "django.contrib.admin",
     "django.contrib.auth",

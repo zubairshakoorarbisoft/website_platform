@@ -26,6 +26,7 @@ urlpatterns = [
     path("portal/", include("dashboards.urls")),
     path("portal/jobs/", include("jobs.urls")),
     path("portal/testimonials/", include("clients.urls")),
+    path("portal/products/", include("products.urls")),
 ]
 
 # Serve media files during development

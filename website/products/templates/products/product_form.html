@@ -1,0 +1,86 @@
+{% extends 'admin-portal-base.html' %}
+{% block content %}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        {% if products.pk %}
+            <h6 class="m-0 font-weight-bold text-primary">Edit products</h6>
+        {% else %}
+            <h6 class="m-0 font-weight-bold text-primary">Add New Products</h6>
+        {% endif %}
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div>
+                {% if form.errors %}
+                    <ul class="text-danger" style="list-style-type: none;">
+                        {% for field, error_list in form.errors.items %}
+                            {% for error in error_list %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}                
+            </div>
+            <div class="col-lg-12">
+                <form method="post" class="user">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="{{ form.product_name.id_for_label }}">{{ form.product_name.label }}</label>
+                            {{ form.product_name }}
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="{{ form.product_image.id_for_label }}">{{ form.product_image.label }}</label>
+                            {{ form.product_image }}
+                        </div>
+                    
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.product_discription.id_for_label }}">{{ form.product_discription.label }}</label>
+                            {{ form.product_discription }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.content.id_for_label }}">{{ form.content.label }}</label>
+                            {{ form.content }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="{{ form.cover_image.id_for_label }}">{{ form.cover_image.label }}</label>
+                            {{ form.cover_image }}
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <a href="{% url 'product_list'%}" class="btn btn-primary btn-user btn-block" >Back</a>
+                        </div>
+                        
+                        {% if i.pk %}
+                            <div class="col-md-3">
+                                <a href="{% url 'delete_product' pk=products.pk %}" class="btn btn-primary btn-user btn-block"> Delete </a>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Update products">
+                            </div>
+                        {% else %}
+                            <div class="col-sm-6">
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Create products">
+                            </div>
+                        {% endif %}
+                    </div>
+                </form>
+        </div>
+        </div>
+    </div>
+</div> 
+
+
+{% endblock %}
