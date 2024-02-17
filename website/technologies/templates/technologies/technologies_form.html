@@ -3,10 +3,10 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        {% if products.pk %}
-            <h6 class="m-0 font-weight-bold text-primary">Edit products</h6>
+        {% if technologys.pk %}
+            <h6 class="m-0 font-weight-bold text-primary">Edit technologys</h6>
         {% else %}
-            <h6 class="m-0 font-weight-bold text-primary">Add New Products</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Add New technologys</h6>
         {% endif %}
     </div>
     <div class="card-body">
@@ -28,20 +28,20 @@
                     {{ form.non_field_errors }}
                     <div class="form-group row">
                         <div class="col-sm-3">
-                            <label for="{{ form.product_name.id_for_label }}">{{ form.product_name.label }}</label>
-                            {{ form.product_name }}
+                            <label for="{{ form.technology_name.id_for_label }}">{{ form.technology_name.label }}</label>
+                            {{ form.technology_name }}
                         </div>
                         <div class="col-sm-3">
-                            <label for="{{ form.product_image.id_for_label }}">{{ form.product_image.label }}</label>
-                            {{ form.product_image }}
+                            <label for="{{ form.technology_image.id_for_label }}">{{ form.technology_image.label }}</label>
+                            {{ form.technology_image }}
                         </div>
                     
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <label for="{{ form.product_discription.id_for_label }}">{{ form.product_discription.label }}</label>
-                            {{ form.product_discription }}
+                            <label for="{{ form.technology_discription.id_for_label }}">{{ form.technology_discription.label }}</label>
+                            {{ form.technology_discription }}
                         </div>
                     </div>
                     <div class="form-group row">
@@ -60,19 +60,19 @@
                     
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <a href="{% url 'product_list'%}" class="btn btn-primary btn-user btn-block" >Back</a>
+                            <a href="{% url 'technology_list'%}" class="btn btn-primary btn-user btn-block" >Back</a>
                         </div>
                         
                         {% if i.pk %}
                             <div class="col-md-3">
-                                <a href="{% url 'delete_product' pk=products.pk %}" class="btn btn-primary btn-user btn-block"> Delete </a>
+                                <a href="{% url 'delete_technology' pk=technologys.pk %}" class="btn btn-primary btn-user btn-block"> Delete </a>
                             </div>
                             <div class="col-md-3">
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Update products">
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Update technologys">
                             </div>
                         {% else %}
                             <div class="col-sm-6">
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Create products">
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Create technologys">
                             </div>
                         {% endif %}
                     </div>

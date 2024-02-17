@@ -6,12 +6,12 @@
             <h6 class="m-0 font-weight-bold text-primary">Confirm Delete</h6>
         </div>
         <div class="card-body">
-            <p>Are you sure you want to delete {{products.company_name}} job?</p>
+            <p>Are you sure you want to delete {{technologys.company_name}} job?</p>
             <form method="post" class="user">
                 {% csrf_token %}
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <a href="{% url 'product_list'%}" class="btn btn-primary btn-user btn-block" >Back</a>
+                        <a href="{% url 'technology_list'%}" class="btn btn-primary btn-user btn-block" >Back</a>
                     </div>
                     <div class="col-sm-6">
                         <input type="submit" class="btn btn-primary btn-user btn-block" value="Yes"> 

@@ -4,9 +4,9 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary d-flex justify-content-between align-items-center">
-                <span>Job Details</span>
-                <a href="{% url 'product_list' %}"  class="btn btn-primary ml-auto"><i class="fa fa-list"></i></a>
-                <a href="{% url 'edit_product' pk=products.pk %}"  class="btn btn-primary ml-1"><i class="fa fa-edit"></i></a>
+                <span>..Details</span>
+                <a href="{% url 'technology_list' %}"  class="btn btn-primary ml-auto"><i class="fa fa-list"></i></a>
+                <a href="{% url 'edit_technology' pk=technologys.pk %}"  class="btn btn-primary ml-1"><i class="fa fa-edit"></i></a>
             </h6>
         </div>
         <div class="card-body">
@@ -23,32 +23,32 @@
                     <div class="p-2">
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">Product Name</label>
-                                <div>{{ products.product_name }}</div>
+                                <label class="col-form-label font-weight-bold">technology Name</label>
+                                <div>{{ technologys.technology_name }}</div>
                             </div>
                             <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">Product Image</label>
-                                <div>{{ products.cover_image }}</div>
+                                <label class="col-form-label font-weight-bold">technology Image</label>
+                                <div>{{ technologys.cover_image }}</div>
                             </div>
                             
                         </div>
         
                         <div class="form-group row">                            
                             <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">Product Discription</label>
-                                <div>{{ products.product_name }}</div>
+                                <label class="col-form-label font-weight-bold">technology Discription</label>
+                                <div>{{ technologys.technology_name }}</div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <label class="col-form-label font-weight-bold">Content</label>
-                                <div>{{ products.content }}</div>
+                                <div>{{ technologys.content }}</div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <label class="col-form-label font-weight-bold">Cover image</label>
-                                <div>{{ products.cover_image }}</div>
+                                <div>{{ technologys.cover_image }}</div>
                             </div>
                         </div>
                         
