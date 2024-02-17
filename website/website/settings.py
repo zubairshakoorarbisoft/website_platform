@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "clients.apps.ClientsConfig",
     "products.apps.ProductsConfig",
     "technologies.apps.TechnologiesConfig",
+    "services.apps.ServicesConfig",
     "home.apps.HomeConfig",
     "django.contrib.admin",
     "django.contrib.auth",

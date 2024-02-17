@@ -1,0 +1,63 @@
+{% extends 'admin-portal-base.html' %}
+
+{% block content %}
+
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary d-flex justify-content-between align-items-center">
+          <span>service</span>
+          <a href="{% url 'create_service' %}"  class="btn btn-primary ml-auto"><i class="fa fa-plus"></i></a>
+      </h6>
+  </div>
+  <div class="card-body">
+      <div class="table-responsive">
+          {% for message in success_messages %}
+              <div class="card mb-4 border-left-success">
+                  <div class="card-body">
+                          {{ message }}
+                          {{break}}
+                  </div>
+              </div>
+          {% endfor %}
+          <div class="col-lg-12">
+              <table class="table table-bordered" id="services" width="100%" cellspacing="0">
+                  <thead>
+                      <tr>
+                          <th class="text-center">Service Name</th>
+                          <th class="text-center">Image</th>
+                          <th class="text-center">Service Discription</th>
+                          <th class="text-center">Actions</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% for i in services %}
+                          <tr>
+                              <td><a href="{% url 'service_detail' pk=i.pk %}">{{ i.service_name }}</a></td>
+                              <td class="text-center">{{ i.service_image }}</td>
+                              <td class="text-center">{{ i.service_discription | truncatewords:5 }}</td>
+                              <td class="text-center">
+                                  <a href="{% url 'edit_service' pk=i.pk %}">
+                                      <i class="fas fa-edit"></i>
+                                  </a>
+                                  <a href="{% url 'delete_service' pk=i.pk %}">
+                                      <i class="fas fa-trash-alt"></i>
+                                  </a>
+                              </td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Your DataTables initialization script -->
+<script>
+$(document).ready(function() {
+  $('#services').DataTable();
+});
+</script>
+
+{% endblock%}
