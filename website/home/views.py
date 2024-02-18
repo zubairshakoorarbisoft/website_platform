@@ -6,6 +6,7 @@ from django.shortcuts import render
 from clients.models import ClientQuery, Testimonial
 from jobs.models import Job
 from services.models import Service
+from products.models import Product
 
 
 
@@ -18,8 +19,10 @@ class HomePageView(TemplateView):
         # Get the testimonials and pass them to the context
         testimonials = Testimonial.objects.all()
         all_services = Service.objects.all()
+        all_products= Product.objects.all()
         context["testimonials"] = testimonials
         context["all_services"] = all_services
+        context["all_products"] = all_products
         context["MEDIA_URL"] = settings.MEDIA_URL
 
         return context
