@@ -24,9 +24,7 @@ class HomePageView(TemplateView):
         context["all_services"] = all_services
         context["all_products"] = all_products
         context["MEDIA_URL"] = settings.MEDIA_URL
-
         return context
-    
 
 class CareersPageView(TemplateView):
     template_name = "home/job_listing.html"
@@ -34,7 +32,6 @@ class CareersPageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["open_jobs"] = Job.objects.all()
-        
         return context
 
 
@@ -62,16 +59,15 @@ def submit_contact_us_form(request):
     # Return a success response
     return JsonResponse({'success': True})
 
-# Services listing through Functional views
-def ServiceDetail(request):
-    servicedetail= Service.objects.all()
-    # servicedetail= Service.objects.get(url=url)
-    my_dict_data= {
-        'servicedetail': servicedetail,
-    }
-    # Render the view to multiple templates
-    template_names = [
-        'home/service_page.html'
-        ]
-    print(servicedetail)  
-    return render(request, template_names , my_dict_data )
+# # Services listing through Functional views
+# def ServiceDetail(request, url):
+#     servicedetail= Service.objects.get(url= url)
+#     my_dict_data= {
+#         'servicedetail': servicedetail,
+#     }
+#     # Render the view to multiple templates
+#     template_names = [
+#         'home/service_page.html'
+#         ]
+#     print(servicedetail)  
+#     return render(request, template_names , my_dict_data )
