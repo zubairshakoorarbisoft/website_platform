@@ -34,6 +34,23 @@ class CareersPageView(TemplateView):
         context["open_jobs"] = Job.objects.all()
         return context
 
+class SingleServicePage(TemplateView):
+    template_name = "home/single_service.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["services"] = Service.objects.all()
+        return context
+
+
+class SingleProductPage(TemplateView):
+    template_name = "home/single_product.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["prduct"] = Product.objects.all()
+        return context
+
 
 @require_POST
 def submit_contact_us_form(request):
@@ -59,15 +76,3 @@ def submit_contact_us_form(request):
     # Return a success response
     return JsonResponse({'success': True})
 
-# # Services listing through Functional views
-# def ServiceDetail(request, url):
-#     servicedetail= Service.objects.get(url= url)
-#     my_dict_data= {
-#         'servicedetail': servicedetail,
-#     }
-#     # Render the view to multiple templates
-#     template_names = [
-#         'home/service_page.html'
-#         ]
-#     print(servicedetail)  
-#     return render(request, template_names , my_dict_data )
