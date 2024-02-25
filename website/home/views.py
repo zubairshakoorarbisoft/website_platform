@@ -7,7 +7,7 @@ from clients.models import ClientQuery, Testimonial
 from jobs.models import Job
 from services.models import Service
 from products.models import Product
-
+from technologies.models import Technology
 
 
 class HomePageView(TemplateView):
@@ -49,6 +49,15 @@ class SingleProductPage(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["prduct"] = Product.objects.all()
+        return context
+
+
+class SingleTechnologyPage(TemplateView):
+    template_name = "home/single_technology.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["technology"] = Technology.objects.all()
         return context
 
 
