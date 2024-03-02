@@ -35,7 +35,6 @@ class JobDetailView(DetailView):
 
         return render(request, self.template_name, {'job': job, 'success_messages': success_messages_list})
 
-
 class EditJobView(UpdateView):
     model = Job
     form_class = JobForm
@@ -49,6 +48,7 @@ class JobListView(ListView):
     model = Job
     template_name = 'jobs/job_list.html'
     context_object_name = 'jobs'
+
 
     def get(self, request):
         # Check for success messages and pass them to the template

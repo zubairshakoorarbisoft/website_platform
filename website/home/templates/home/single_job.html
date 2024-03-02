@@ -1,0 +1,113 @@
+{% extends 'site-base.html' %}
+{% block title %}Career - {{job_detail.display_title}} {% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="container">
+  <div class="row gy-4">
+    <!-- Job display section -->
+    <div class="col-lg-9">
+
+      <div class="row">
+        <div class="col">
+          <h1>{{job_detail.display_title}}</h1>
+        </div>
+        <div class="col text-end">
+          <a class="btn btn-light" href="">Apply Now</a>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-3">
+          <p><i class="fa-solid fa-wallet"></i> {{job_detail.salary}} {{job_detail.salary_type}}</p>
+        </div>
+        <div class="col-2 ">
+          <p><i class="fa-solid fa-user"></i> {{job_detail.no_of_positions}}</p>
+        </div>
+        <div class="col ">
+          <p><i class="fa-solid fa-city"></i> {{job_detail.company_name}}</p>
+        </div>
+      </div>
+
+      <p><b>Job Type</b>:  
+      {% if job_detail.is_on_site %}
+        Onsite
+      {% endif %}
+      {% if job_detail.is_remote %}
+        Remote
+      {% endif %}
+      </p>
+
+      <p><b>Industry</b>: {{job_detail.domain}}</p>
+      <p><b>Location</b>: {{job_detail.location}}</p>
+      <p><b>Apply By</b>: {{job_detail.last_date_to_apply}}</p>
+      <p><b>Salary</b>: {{job_detail.salary}} {{job_detail.salary_type}}</p>
+      <p><b>Total Positions</b>: {{job_detail.no_of_positions}}</p>
+  
+      <h4>Job Discription</h4>
+      <p>{{job_detail.job_description}}</p>
+
+      {% if job_detail.job_requirement %}
+        <h4>Requirements</h4>
+        <p>{{job_detail.job_requirement}}</p>
+      {% endif %}
+
+     {% if job_detail.job_qualifications %}
+        <h4>Qualifications</h4>
+        <p>{{job_detail.job_qualifications}}</p>
+      {% endif %}
+
+      {% if job_detail.job_skills %}
+        <h4>Skills Required</h4>
+        <p>{{job_detail.job_skills}}</p>
+      {% endif %}
+
+
+    </div>
+
+
+    <!-- sidebar start -->
+    <div class="col-lg-3">
+    
+      <div class="box p-3 my-3 shadow-sm">
+        <h4>Company Info</h4>
+        <p>
+          {{job_detail.company_disc}}
+        </p>
+      </div>
+
+      <div class="box p-3 my-3 shadow-sm">
+        <h4>Set Job Alert on your Mail</h4>
+        <p>
+          Subscribe for more, and get updates on time.
+          <!-- Add Email Subscribption form -->
+        </p>
+      </div>
+
+      <div class="box p-3 my-3 shadow-sm">
+        <h4>Similar Jobs</h4>
+        <p>
+          some silters to show similar joibs like this
+        </p>
+      </div>
+
+    </div>
+    <!-- sidebar end -->
+    
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}

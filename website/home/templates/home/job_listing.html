@@ -15,7 +15,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3 pb-1">
                                     <a href="javascript:;" class="d-flex align-items-center">
-                                        <div class="me-2 text-heading h5 mb-0">{{job.display_title}}</div>
+                                    <a href="{{job.pk}}">{{job.display_title}}</a>
                                     </a>
                                     <div class="ms-auto">
                                         <ul class="list-inline mb-0 d-flex align-items-center">
@@ -42,16 +42,13 @@
                                         Apply by {{job.last_date_to_apply}}
                                     </div>
                                     <div class="ms-auto">
-                                        <a href="javascript:;" class="me-2"><span
-                                                class="badge bg-label-success rounded-pill">{{job.domain}}</span></a>
                                         {% if job.is_remote %}
-                                        <a href="javascript:;" class="me-2"><span
-                                                class="badge bg-label-primary rounded-pill">Remote</span></a>
+                                        <span class="border-2 btn btn-light px-3 rounded-pill" >Remote</span>
+
                                         {% endif %}
 
                                         {% if job.is_on_site %}
-                                        <a href="javascript:;" class="me-2"><span
-                                                class="badge bg-label-info rounded-pill">On-Site</span></a>
+                                        <span class="btn btn-outline-success  rounded-pill">Onsite</span>
                                         {% endif %}
                                     </div>
                                 </div>

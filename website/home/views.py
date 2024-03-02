@@ -1,8 +1,8 @@
 from django.conf import settings
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from clients.models import ClientQuery, Testimonial
 from jobs.models import Job
 from services.models import Service
@@ -33,6 +33,17 @@ class CareersPageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["open_jobs"] = Job.objects.all()
         return context
+    
+class JobDetailView(DetailView):
+    model = Job
+    context_object_name = 'job_detail'
+    template_name = 'home/single_job.html'
+
+    def get(self, request, pk):
+        job_detail = get_object_or_404(Job, pk=pk)
+        return render(request, self.template_name, {'job_detail': job_detail})
+
+
 
 class SingleServicePage(TemplateView):
     template_name = "home/single_service.html"
@@ -48,7 +59,7 @@ class SingleProductPage(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["prduct"] = Product.objects.all()
+        context["product"] = Product.objects.all()
         return context
 
 

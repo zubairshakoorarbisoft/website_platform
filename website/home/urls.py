@@ -5,7 +5,8 @@ from .views import(
      submit_contact_us_form,
      SingleServicePage,
      SingleProductPage,
-     SingleTechnologyPage
+     SingleTechnologyPage,
+     JobDetailView
 )
 
 from .import views
@@ -13,11 +14,12 @@ from .import views
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
-    path('careers/', CareersPageView.as_view(), name='careers'),
     path('contact-us/', submit_contact_us_form, name='submit_contact_us_form'),
     path('service/',  SingleServicePage.as_view(), name='all_services' ),
     path('product/',  SingleProductPage.as_view(), name='all_products' ),
     path('technology/',  SingleTechnologyPage.as_view(), name='all_technologys' ),
+    path('careers/', CareersPageView.as_view(), name='careers'),
+    path('careers/<str:pk>/',  JobDetailView.as_view(), name='job_detail' ),
 
 
 
