@@ -48,8 +48,8 @@ class SingleServicePage(DetailView):
     context_object_name = 'service_detail'
     template_name = "home/single_service.html"
 
-    def get(self, request, pk):
-        service_detail = get_object_or_404(Service, pk=pk)
+    def get(self, request, url):
+        service_detail = get_object_or_404(Service, url= url)
         return render(request, self.template_name, {'service_detail': service_detail})
 
 
@@ -59,8 +59,8 @@ class SingleProductPage(DetailView):
     context_object_name = 'product_detail'
     template_name = "home/single_product.html"
 
-    def get(self, request, pk):
-        product_detail = get_object_or_404(Product, pk=pk)
+    def get(self, request, url):
+        product_detail = get_object_or_404(Product, url= url)
         return render(request, self.template_name, {'product_detail': product_detail})
 
 
@@ -70,8 +70,8 @@ class SingleTechnologyPage(DetailView):
     context_object_name = 'technology_detail'
     template_name = "home/single_technology.html"
 
-    def get(self, request, pk):
-        technology_detail = get_object_or_404(Technology, pk=pk)
+    def get(self, request, url):
+        technology_detail = get_object_or_404(Technology,url= url)
         return render(request, self.template_name, {'technology_detail': technology_detail})
 
 
