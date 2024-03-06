@@ -3,8 +3,9 @@
 {% block title %}{% endblock%}
 
 {% block content %}
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
+
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="d-flex align-items-center">
 
   <div class="container">
     <div class="row">
@@ -21,140 +22,155 @@
     </div>
   </div>
 
-</section><!-- End Hero -->
+ </section><!-- End Hero -->
 
-<main id="main">
+ <main id="main">
 
-  <!-- ======= About Section ======= -->
-  <section class="about">
-    <div class="container">
+<!-- section -->
+<div class="container pt-5 ">
+ <h2>Working Models of CRM </h2>
+  <div class="col border p-3 m-3 shadow">
+    <h5> {{product_detail.usage_1}}</h5>
+    <p> {{product_detail.usage_1_disc}}.</p>
+  </div>
+  <div class="col border p-3 m-3 shadow">
+    <h5> {{product_detail.usage_2}}</h5>
+    <p> {{product_detail.usage_2_disc}}.</p>
+  </div>
+  <div class="col border p-3 m-3 shadow">
+    <h5> {{product_detail.usage_3}}</h5>
+    <p> {{product_detail.usage_3_disc}}.</p>
+  </div>
+  <div class="col border p-3 m-3 shadow">
+    <h5> {{product_detail.usage_4}}</h5>
+    <p> {{product_detail.usage_4_disc}}.</p>
+  </div>
 
-      <div
-        class="col-xl-12 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-        <h3>Some features of CRM by IzyanSoft</h3>
-        <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus
-          laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla
-          tenetur. Suscipit aut voluptate.</p>
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-book-half"></i></div>
-          <h4 class="title"><a href="">Feature of Produst</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-            occaecati cupiditate non provident</p>
-        </div>
-
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-book-half"></i></div>
-          <h4 class="title"><a href="">Nemo Enim</a></h4>
-          <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-            voluptatum deleniti atque</p>
-        </div>
-
-        <div class="icon-box">
-          <div class="icon"><i class="bi bi-book-half"></i></i></div>
-          <h4 class="title"><a href="">Dine Pad</a></h4>
-          <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut
-            deserunt minus aut eligendi omnis</p>
-        </div>
-      </div>
-
-    </div>
-  </section><!-- End About Section -->
-
-
+</div>
+<!-- cards end -->
 
   <div class="container">
     <div class="row gy-4">
-      <!-- Job display section -->
       <div class="col-lg-9">
 
-        <h2>Working Models of CRM </h2>
-        <div class="row">
-          <div class="col-5 border p-3 m-3 shadow">
-            <h5>Card title</h5>
-            <h6 class="text-body-secondary">Card subtitle</h6>
-            <p>Some quick example text to build on the card title and make up the bulk of the card's card title and make
-              up the bulk of the card's card title and make up the bulk of the card's content.</p>
+
+        <!-- ======= About Section ======= -->
+        <section class="about">
+          <div class="container">
+
+            <div
+              class="col-xl-12 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+              <h3>{{product_detail.h2}}</h3>
+              <p>{{product_detail.content}}.</p>
+
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-book-half"></i></div>
+                <h4 class="title"><a href="">{{product_detail.process_1}}</a></h4>
+                <p class="description">{{product_detail.process_1_disc}}</p>
+              </div>
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-book-half"></i></div>
+                <h4 class="title"><a href="">{{product_detail.process_2}}</a></h4>
+                <p class="description">{{product_detail.process_2_disc}}</p>
+              </div>
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-book-half"></i></div>
+                <h4 class="title"><a href="">{{product_detail.process_3}}</a></h4>
+                <p class="description">{{product_detail.process_3_disc}}</p>
+              </div>
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-book-half"></i></div>
+                <h4 class="title"><a href="">{{product_detail.process_4}}</a></h4>
+                <p class="description">{{product_detail.process_4_disc}}</p>
+              </div>
+
+            </div>
+
           </div>
-          
-          <div class=" col-5 border p-3 m-3 shadow">
-            <h5>Card title</h5>
-            <h6 class="text-body-secondary">Card subtitle</h6>
-            <p>Some quick example text to build on the card title and make up the bulk of the card's card title and make
-              up the bulk of the card's card title and make up the bulk of the card's content.</p>            
-          </div>
-        </div>
-        <!-- cards end -->
-        <!-- technologies section -->
+        </section><!-- End About Section -->
+
+
+
+
         
+        <!-- technologies section -->
+
         <section>
           <h2>Technoloigies Used in the Project</h2>
           <div class="container bg-secondary-subtle p-5 rounded-2">
-            <div>
-              <h4>Front End Technologies</h4>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">Rect JS</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">Bootstrap</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">HTML</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">CSS</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">JavaScript</button>
-            </div>
+            <h5>Back-End Technologies</h5>
+            {% if product_detail.dotnet %}<p class="btn btn-outline-secondary rounded-0 p-3">.Dot Net</p>{% endif %}
+            {% if product_detail.java %}<p class="btn btn-outline-secondary rounded-0 p-3">Java</p>{% endif %}
+            {% if product_detail.python %}<p class="btn btn-outline-secondary rounded-0 p-3">python</p>{% endif %}
+            {% if product_detail.php %}<p class="btn btn-outline-secondary rounded-0 p-3">PHP</p>{% endif %}
+            {% if product_detail.nodejs %}<p class="btn btn-outline-secondary rounded-0 p-3">Node JS</p>{% endif %}
 
-            <div>
-              <h4>DataBase</h4>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">MySQL</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">SQLite</button>
-            </div>
+            <h5>Front-End Technologies</h5>
+            {% if product_detail.html %}<p class="btn btn-outline-secondary rounded-0 p-3">HTML</p>{% endif %}
+            {% if product_detail.css %}<p class="btn btn-outline-secondary rounded-0 p-3">CSS</p>{% endif %}
+            {% if product_detail.javascript %}<p class="btn btn-outline-secondary rounded-0 p-3">JavaScript</p>{% endif %}
+            {% if product_detail.react %}<p class="btn btn-outline-secondary rounded-0 p-3">React</p>{% endif %}
+            {% if product_detail.vue %}<p class="btn btn-outline-secondary rounded-0 p-3">Vue.Js</p>{% endif %}
 
-            <div>
-              <h4>Framework Used</h4>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">Django</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">RESTfull API</button>
-            </div>
+            <h5>Cloud Technologies</h5>
+            {% if product_detail.aws %}<p class="btn btn-outline-secondary rounded-0 p-3">AWS</p>{% endif %}
+            {% if product_detail.azure %}<p class="btn btn-outline-secondary rounded-0 p-3">Azure</p>{% endif %}
+            {% if product_detail.googlecloud %}<p class="btn btn-outline-secondary rounded-0 p-3">Google Cloud</p>{% endif %}
 
-            <div>
-              <h4>Back End Technologies</h4>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">Python</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">Node JS</button>
-              <button class="btn btn-outline-secondary  rounded-0  p-3">Typescript</button>
-            </div>
+            <h5>Mobile App Development Technologies</h5>
+            {% if product_detail.ios %}<p class="btn btn-outline-secondary rounded-0 p-3">IOS</p>{% endif %}
+            {% if product_detail.android %}<p class="btn btn-outline-secondary rounded-0 p-3">Android</p>{% endif %}
+            {% if product_detail.reactnative %}<p class="btn btn-outline-secondary rounded-0 p-3">React Native</p>{%endif %}
+            {% if product_detail.flutter %}<p class="btn btn-outline-secondary rounded-0 p-3">Flutter</p>{% endif %}
+            {% if product_detail.flkotlinutter %}<p class="btn btn-outline-secondary rounded-0 p-3">Kotlin</p>{% endif %}
+
+            <h5>Database Technologies</h5>
+            {% if product_detail.sqlserver %}<p class="btn btn-outline-secondary rounded-0 p-3">Sql Server</p>{% endif %}
+            {% if product_detail.mysql %}<p class="btn btn-outline-secondary rounded-0 p-3">My Sql</p>{% endif %}
+            {% if product_detail.postgres %}<p class="btn btn-outline-secondary rounded-0 p-3">Postgres</p>{% endif %}
+            {% if product_detail.mongodb %}<p class="btn btn-outline-secondary rounded-0 p-3">Mongo DB</p>{% endif %}
+
+            <h5>Pyamenet Gateways</h5>
+            {% if product_detail.paypal %}<p class="btn btn-outline-secondary rounded-0 p-3">Paypal</p>{% endif %}
+            {% if product_detail.stripe %}<p class="btn btn-outline-secondary rounded-0 p-3">Stripe</p>{% endif %}
+            {% if product_detail.gpay %}<p class="btn btn-outline-secondary rounded-0 p-3">G pay</p>{% endif %}
+            {% if product_detail.visa %}<p class="btn btn-outline-secondary rounded-0 p-3">VISA</p>{% endif %}
 
           </div>
       </div>
 
-   
 
 
-    <!-- sidebar start -->
-    <div class="col-lg-3">
 
-      <div class="box p-3 my-3 shadow-sm">
-        <h4>Did'nt Understant the ERP? Talk to Our Experts</h4>
-        <p>
-          Schedule an appointment <br>
-          Also you acan add contact no, some auto reply messsaging.
-          
-        </p>
+      <!-- sidebar start -->
+      <div class="col-lg-3 pt-5">
+
+        <div class="box p-3 my-3 shadow-sm">
+          <h5>Did'nt Get the {{product_detail.product_name}}?</h5>
+          <p>Did'nt understand the {{product_detail.product_name}}? No need to worry about it. Talk to our experts!</p>
+        </div>
+
+
+        <div class="box p-3 my-3 shadow-sm">
+          <h5>Why Choose IzyanSoft for Your {{product_detail.product_name}}?</h5>
+          <p>
+            some content for clients's attration
+          </p>
+        </div>
+
+
+
+        <div class="box p-3 my-3 shadow-sm">
+          <h5>Our Similar Products</h5>
+          <p>
+            some filters to show similar products like this
+          </p>
+        </div>
+
       </div>
-
-      <div class="box p-3 my-3 shadow-sm">
-        <h4>Why Choose IzyanSoft for Your ERP</h4>
-        <p>
-          some content for clients's attration
-        </p>
-      </div>
-
-  
-
-      <div class="box p-3 my-3 shadow-sm">
-        <h4>Similar Products</h4>
-        <p>
-          some filters to show similar products like this
-        </p>
-      </div>
+      <!-- sidebar end -->
 
     </div>
-    <!-- sidebar end -->
-
-  </div>
   </div>
 
 
@@ -162,44 +178,46 @@
     <div class="container position-relative">
       <div class="text-center text-white  m-5">
         <h4>Get An Estimate of this Project!</h4>
-    <p>
-      Schedule a call or meeting, with our experts to get cost estimate, timeline and procedure. Get an estimated ROI (Return Over Investment). IzyanSoft is allways here to assists you throughout. 
-    </p>
-    <a href=""><button class="btn btn-light" >Schedule a Call</button></a>
+        <p>
+          Schedule a call or meeting, with our experts to get cost estimate, timeline and procedure. Get an estimated
+          ROI (Return Over Investment). IzyanSoft is allways here to assists you throughout.
+        </p>
+        <a href=""><button class="btn btn-light">Schedule a Call</button></a>
       </div>
     </div>
   </section>
 
-<div class="container pt-3">
-  <h2>Benefits of CRM </h2>
-        <div class="row">
-          <div class="col-3 border p-3 m-3 shadow">
-            <div class="text-center text-warning">
-              <i class="fa-solid fa-star fa-3x text-center"></i>
-              <h5 class="pt-3">Card title</h5>            
-            </div>
-            <p>Some quick example text to build on the card title and make up the bulk of the card's card title and make
-              up the bulk of the card' ent.</p>            
-          </div>
-          <div class="col-3 border p-3 m-3 shadow">
-            <div class="text-center text-warning">
-              <i class="fa-solid fa-star fa-3x text-center"></i>
-              <h5 class="pt-3">Card title</h5>            
-            </div>
-            <p>Some quick example text to build on thecard title and make up the bulk of the card' ent.</p>            
-          </div>
-          <div class="col-3 border p-3 m-3 shadow">
-            <div class="text-center text-warning">
-              <i class="fa-solid fa-star fa-3x text-center"></i>
-              <h5 class="pt-3">Card title</h5>            
-            </div>
-            <p>Some quick example text to build on the card title and make up the bulk of the card's card title and make
-              up the bulk of the card' ent.</p>            
-          </div>
+  <div class="container pt-3">
+    <h2>Benefits of CRM </h2>
+    <div class="row">
+      <div class="col-3 border p-3 m-3 shadow">
+        <div class="text-center text-warning">
+          <i class="fa-solid fa-star fa-3x text-center"></i>
+          <h5 class="pt-3">Card title</h5>
         </div>
-</div>
+        <p>Some quick example text to build on the card title and make up the bulk of the card's card title and make
+          up the bulk of the card' ent.</p>
+      </div>
+      <div class="col-3 border p-3 m-3 shadow">
+        <div class="text-center text-warning">
+          <i class="fa-solid fa-star fa-3x text-center"></i>
+          <h5 class="pt-3">Card title</h5>
+        </div>
+        <p>Some quick example text to build on thecard title and make up the bulk of the card' ent.</p>
+      </div>
+      <div class="col-3 border p-3 m-3 shadow">
+        <div class="text-center text-warning">
+          <i class="fa-solid fa-star fa-3x text-center"></i>
+          <h5 class="pt-3">Card title</h5>
+        </div>
+        <p>Some quick example text to build on the card title and make up the bulk of the card's card title and make
+          up the bulk of the card' ent.</p>
+      </div>
+    </div>
+  </div>
 
 
 
-</main><!-- End #main -->
+ </main><!-- End #main -->
+
 {% endblock %}
