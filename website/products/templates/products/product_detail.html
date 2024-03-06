@@ -25,30 +25,104 @@
                             <div class="col-sm-4">
                                 <label class="col-form-label font-weight-bold">Product Name</label>
                                 <div>{{ products.product_name }}</div>
-                            </div>
+                            </div>                                                   
                             <div class="col-sm-4">
                                 <label class="col-form-label font-weight-bold">Product Image</label>
                                 <div>{{ products.cover_image }}</div>
-                            </div>
-                            
+                            </div>                            
                         </div>
         
                         <div class="form-group row">                            
-                            <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">Product Discription</label>
-                                <div>{{ products.product_name }}</div>
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Heading 1</label>
+                                <div>{{ products.h1 }}</div>
                             </div>
                         </div>
-                        <div class="form-group row">
+
+                        <div class="form-group row">                            
                             <div class="col-sm-12">
-                                <label class="col-form-label font-weight-bold">Content</label>
+                                <label class="col-form-label font-weight-bold">Product Discription</label>
+                                <div>{{ products.product_discription }}</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">                            
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Section 2:</label>
+                                <div> <h4>{{ products.h2 }}  </h4></div>
                                 <div>{{ products.content }}</div>
                             </div>
                         </div>
-                        <div class="form-group row">
+                    
+                        <div class="form-group row"> 
+                            <h4>Processes In our Product </h4>                                 
                             <div class="col-sm-12">
-                                <label class="col-form-label font-weight-bold">Cover image</label>
-                                <div>{{ products.cover_image }}</div>
+                                <div class="mb-2" ><b>Process 1: {{ products.process_1 }} </b><br>{{ products.process_1_disc }}</div>
+                                <div class="mb-2" ><b>Process 2: {{ products.process_2 }} </b><br>{{ products.process_2_disc }}</div>
+                                <div class="mb-2" ><b>Process 3: {{ products.process_3 }} </b><br>{{ products.process_3_disc }}</div>
+                                <div class="mb-2" ><b>Process 4: {{ products.process_4 }} </b><br>{{ products.process_4_disc }}</div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group row"> 
+                            <h4>Usages of Product </h4>                        
+                            <div class="col-sm-12">
+                                <li> 1: {{ products.usage_1 }} <br>{{ products.usage_1_disc }}</li>
+                            </div>
+                            <div class="col-sm-12">
+                                <li> 2: {{ products.usage_2 }} <br>{{ products.usage_2_disc }}</li>
+                            </div>
+                            <div class="col-sm-12">
+                                <li> 3: {{ products.usage_3 }} <br>{{ products.usage_3_disc }}</li>
+                            </div>
+                            <div class="col-sm-12">
+                                <li> 4: {{ products.usage_4 }} <br>{{ products.usage_4_disc }}</li>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group row">
+                            <h4> Technologies In the Product </h4>
+                            <div class="col-sm-12">
+                                <h5>Back-End Technologies</h5>
+                                {% if product.dotnet %}<p class="btn btn-outline-secondary p-2">Dot Net</p>{% endif %}
+                                {% if products.java %}<p class="btn btn-outline-secondary p-2">Java</p>{% endif %}
+                                {% if products.python %}<p class="btn btn-outline-secondary p-2">python</p>{% endif %}
+                                {% if products.php %}<p class="btn btn-outline-secondary p-2">php</p>{% endif %}
+                                {% if products.nodejs %}<p class="btn btn-outline-secondary p-2">nodejs</p>{% endif %}
+                            
+                                <h5>Front-End Technologies</h5>
+                                {% if product.html %}<p class="btn btn-outline-secondary p-2">HTML</p>{% endif %}
+                                {% if products.css %}<p class="btn btn-outline-secondary p-2">CSS</p>{% endif %}
+                                {% if products.javascript %}<p class="btn btn-outline-secondary p-2">JavaScript</p>{% endif %}
+                                {% if products.react %}<p class="btn btn-outline-secondary p-2">React</p>{% endif %}
+                                {% if products.vue %}<p class="btn btn-outline-secondary p-2">Vue.Js</p>{% endif %}
+                            
+                                <h5>Cloud Technologies</h5>
+                                {% if product.aws %}<p class="btn btn-outline-secondary p-2">AWS</p>{% endif %}
+                                {% if products.azure %}<p class="btn btn-outline-secondary p-2">Azure</p>{% endif %}
+                                {% if products.googlecloud %}<p class="btn btn-outline-secondary p-2">GoogleCloud</p>{% endif %}
+                                
+                                <h5>Cloud Technologies</h5>
+                                {% if product.ios %}<p class="btn btn-outline-secondary p-2">IOS</p>{% endif %}
+                                {% if products.android %}<p class="btn btn-outline-secondary p-2">Android</p>{% endif %}
+                                {% if products.reactnative %}<p class="btn btn-outline-secondary p-2">reactnative</p>{% endif %}
+                                {% if products.flutter %}<p class="btn btn-outline-secondary p-2">Flutter</p>{% endif %}
+                                {% if products.flkotlinutter %}<p class="btn btn-outline-secondary p-2">Kotlin</p>{% endif %}
+                                
+                                <h5>Database Technologies</h5>
+                                {% if product.sqlserver %}<p class="btn btn-outline-secondary p-2">Sql Server</p>{% endif %}
+                                {% if products.mysql %}<p class="btn btn-outline-secondary p-2">My Sql</p>{% endif %}
+                                {% if products.postgres %}<p class="btn btn-outline-secondary p-2">Postgres</p>{% endif %}
+                                {% if products.mongodb %}<p class="btn btn-outline-secondary p-2">Mongo DB</p>{% endif %}
+                               
+                                <h5>Pyamenet Gateways</h5>
+                                {% if product.paypal %}<p class="btn btn-outline-secondary p-2">Paypal</p>{% endif %}
+                                {% if products.stripe %}<p class="btn btn-outline-secondary p-2">Stripe</p>{% endif %}
+                                {% if products.gpay %}<p class="btn btn-outline-secondary p-2">G pay</p>{% endif %}
+                                {% if products.visa %}<p class="btn btn-outline-secondary p-2">VISA</p>{% endif %}
+                                                           
                             </div>
                         </div>
                         
