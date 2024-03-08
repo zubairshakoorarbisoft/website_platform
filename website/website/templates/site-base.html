@@ -100,7 +100,13 @@
   <footer id="footer">
 
     <div class="container py-3 mt-5 ">
-      Social Share APIS here
+
+      <div class="container"> 
+        Share on:
+        <a href="{% url 'share_facebook' %}" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href="{% url 'share_twitter' %}" target="_blank" ><i class="fa-brands fa-twitter fa-2x"></i></a>
+        <a href="{% url 'share_linkedin' %}" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+      </div>
     </div>
 
     <div class="footer-top">

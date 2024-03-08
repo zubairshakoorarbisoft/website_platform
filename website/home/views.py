@@ -9,6 +9,9 @@ from services.models import Service
 from products.models import Product
 from technologies.models import Technology
 
+from django.http import HttpResponseRedirect
+
+
 
 class HomePageView(TemplateView):
     template_name= 'home/index.html'
@@ -102,3 +105,20 @@ def submit_contact_us_form(request):
     # Return a success response
     return JsonResponse({'success': True})
 
+
+
+
+
+#Social Sharing
+
+def share_facebook(request):
+    share_url = 'https://izyansoft.com/'
+    return HttpResponseRedirect(f'https://www.facebook.com/sharer/sharer.php?u={share_url}')
+
+def share_twitter(request):
+    share_url = 'https://izyansoft.com/'
+    return HttpResponseRedirect(f'https://twitter.com/intent/tweet?url={share_url}')
+
+def share_linkedin(request):
+    share_url = 'https://izyansoft.com/'
+    return HttpResponseRedirect(f'https://twitter.com/intent/tweet?url={share_url}')

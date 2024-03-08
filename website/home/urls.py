@@ -21,6 +21,8 @@ urlpatterns = [
     path('careers/', CareersPageView.as_view(), name='careers'),
     path('careers/<str:pk>/',  JobDetailView.as_view(), name='job_detail' ),
 
-
+    path('share/facebook/', views.share_facebook, name='share_facebook'),
+    path('share/twitter/', views.share_twitter, name='share_twitter'),
+    path('share/linkedin/', views.share_linkedin, name='share_linkedin'),
 
 ]
