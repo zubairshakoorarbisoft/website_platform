@@ -21,34 +21,65 @@
                 {% endfor %}
                 <div class="col-lg-12">
                     <div class="p-2">
+
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">technology Name</label>
-                                <div>{{ technologys.technology_name }}</div>
-                            </div>
+                                <label class="col-form-label font-weight-bold">Technology Name</label>
+                                <div>{{ technologys.product_name }}</div>
+                            </div>                                                   
                             <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">technology Image</label>
-                                <div>{{ technologys.cover_image }}</div>
-                            </div>
-                            
+                                <label class="col-form-label font-weight-bold">Technology Image</label>
+                                 <div>{{ technologys.cover_image }}</div>
+                            </div>                            
                         </div>
-        
+            
                         <div class="form-group row">                            
-                            <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">technology Discription</label>
-                                <div>{{ technologys.technology_name }}</div>
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Heading 1</label>
+                                <div>{{ technologys.h1 }}</div>
                             </div>
                         </div>
-                        <div class="form-group row">
+    
+                        <div class="form-group row">                            
                             <div class="col-sm-12">
-                                <label class="col-form-label font-weight-bold">Content</label>
+                                <label class="col-form-label font-weight-bold">Technology Discription</label>
+                                <div>{{ technologys.technology_discription }}</div>
+                            </div>
+                        </div>
+    
+
+                        <div class="form-group row">                            
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Section 2:</label>
+                                <div> <h4>{{ technologys.h2 }}  </h4></div>
                                 <div>{{ technologys.content }}</div>
                             </div>
                         </div>
-                        <div class="form-group row">
+
+                        <div class="form-group row"> 
+                            <h4>Processes In our Product </h4>                                 
                             <div class="col-sm-12">
-                                <label class="col-form-label font-weight-bold">Cover image</label>
-                                <div>{{ technologys.cover_image }}</div>
+                                <div class="mb-2" ><b>Process 1: {{ technologys.benefit_1 }} </b><br>{{ technologys.benefit_1_disc }}</div>
+                                <div class="mb-2" ><b>Process 2: {{ technologys.benefit_2 }} </b><br>{{ technologys.benefit_2_disc }}</div>
+                                <div class="mb-2" ><b>Process 3: {{ technologys.benefit_3 }} </b><br>{{ technologys.benefit_3_disc }}</div>
+                                <div class="mb-2" ><b>Process 4: {{ technologys.benefit_4 }} </b><br>{{ technologys.benefit_4_disc }}</div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-group row"> 
+                            <h4>Usages of Technology </h4>                        
+                            <div class="col-sm-12">
+                                <li> 1: {{ technologys.usage_1 }} <br>{{ technologys.usage_1_disc }}</li>
+                            </div>
+                            <div class="col-sm-12">
+                                <li> 2: {{ technologys.usage_2 }} <br>{{ technologys.usage_2_disc }}</li>
+                            </div>
+                            <div class="col-sm-12">
+                                <li> 3: {{ technologys.usage_3 }} <br>{{ technologys.usage_3_disc }}</li>
+                            </div>
+                            <div class="col-sm-12">
+                                <li> 4: {{ technologys.usage_4 }} <br>{{ technologys.usage_4_disc }}</li>
                             </div>
                         </div>
                         

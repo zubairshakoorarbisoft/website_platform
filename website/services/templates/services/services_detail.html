@@ -21,37 +21,70 @@
                 {% endfor %}
                 <div class="col-lg-12">
                     <div class="p-2">
+                        
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label class="col-form-label font-weight-bold">Service Name</label>
                                 <div>{{ services.service_name }}</div>
-                            </div>
+                            </div>                                                   
                             <div class="col-sm-4">
                                 <label class="col-form-label font-weight-bold">Service Image</label>
-                                <div>{{ services.cover_image }}</div>
-                            </div>
-                            
+                                 <div>{{ services.cover_image }}</div>
+                            </div>                            
                         </div>
-        
+            
                         <div class="form-group row">                            
-                            <div class="col-sm-4">
-                                <label class="col-form-label font-weight-bold">Service Discription</label>
-                                <div>{{ services.service_name }}</div>
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Heading 1</label>
+                                <div>{{ services.h1 }}</div>
                             </div>
                         </div>
-                        <div class="form-group row">
+
+                        <div class="form-group row">                            
                             <div class="col-sm-12">
-                                <label class="col-form-label font-weight-bold">Content</label>
+                                <label class="col-form-label font-weight-bold">Service Discription</label>
+                                <div>{{ services.service_discription }}</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">                            
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Section 2:</label>
+                                <div> <h4>{{ services.h2 }}  </h4></div>
                                 <div>{{ services.content }}</div>
                             </div>
                         </div>
-                        <div class="form-group row">
+
+                        <div class="form-group row"> 
+                            <h4>Processes In our Product </h4>                                 
                             <div class="col-sm-12">
-                                <label class="col-form-label font-weight-bold">Cover image</label>
-                                <div>{{ services.cover_image }}</div>
+                                <div class="mb-2" ><b>Benefit 1: {{ services.benefit_1 }} </b><br>{{ services.benefit_1_disc }}</div>
+                                <div class="mb-2" ><b>Benefit 2: {{ services.benefit_2 }} </b><br>{{ services.benefit_2_disc }}</div>
+                                <div class="mb-2" ><b>Benefit 3: {{ services.benefit_3 }} </b><br>{{ services.benefit_3_disc }}</div>
+                                <div class="mb-2" ><b>Benefit 4: {{ services.benefit_4 }} </b><br>{{ services.benefit_4_disc }}</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row"> 
+                         <h4>{{services.section_2_h2}} </h4>                                                             
+                            <div class="col-sm-12">
+                                <div class="mb-2" ><b>Service 1: {{ services.service_1 }} </b><br>{{ services.service_1_disc }}</div>
+                                <div class="mb-2" ><b>Service 2: {{ services.service_2 }} </b><br>{{ services.service_2_disc }}</div>
+                                <div class="mb-2" ><b>Service 3: {{ services.service_3 }} </b><br>{{ services.service_3_disc }}</div>
+                                <div class="mb-2" ><b>Service 4: {{ services.service_4 }} </b><br>{{ services.service_4_disc }}</div>
+                                <div class="mb-2" ><b>Service 5: {{ services.service_5 }} </b><br>{{ services.service_5_disc }}</div>
+                                <div class="mb-2" ><b>Service 6: {{ services.service_6 }} </b><br>{{ services.service_6_disc }}</div>
                             </div>
                         </div>
                         
+                        
+                        <div class="form-group row">                            
+                            <div class="col-sm-12">
+                                <label class="col-form-label font-weight-bold">Section 3:</label>
+                                <div> <h4>{{ services.section_3_h2 }}  </h4></div>
+                                <div>{{ services.section_3_content }}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

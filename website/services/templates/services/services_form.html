@@ -27,40 +27,40 @@
                     {% csrf_token %}
                     {{ form.non_field_errors }}
 
-                    <div class="form-group row">
-                        <div class="col-sm-3">
-                            <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
-                            {{ form.name }}
-                        </div>
-                        <div class="col-sm-3">
-                            <label for="{{ form.category.id_for_label }}">{{ form.category.label }}</label>
-                            {{ form.category }}
-                        </div>
                     
-
-
-
-
-
-
-                    {% comment %} ------------------------------------------ {% endcomment %}
-
                     <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="{{ form.service_name.id_for_label }}">{{ form.service_name.label }}</label>
                             {{ form.service_name }}
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
+                            <label for="{{ form.url.id_for_label }}">{{ form.url.label }}</label>
+                            {{ form.url }}
+                        </div>
+                        <div class="col-sm-4">
                             <label for="{{ form.service_image.id_for_label }}">{{ form.service_image.label }}</label>
                             {{ form.service_image }}
                         </div>
-                    
-                    </div>
 
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.h1.id_for_label }}">{{ form.h1.label }}</label>
+                            {{ form.h1 }}
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <label for="{{ form.service_discription.id_for_label }}">{{ form.service_discription.label }}</label>
                             {{ form.service_discription }}
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.h2.id_for_label }}">{{ form.h2.label }}</label>
+                            {{ form.h2 }}
                         </div>
                     </div>
                     <div class="form-group row">
@@ -69,19 +69,155 @@
                             {{ form.content }}
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <div class="col-sm-3">
-                            <label for="{{ form.cover_image.id_for_label }}">{{ form.cover_image.label }}</label>
-                            {{ form.cover_image }}
+                        <div class="col-sm-4">
+                            <label for="{{ form.benefit_1.id_for_label }}">{{ form.benefit_1.label }}</label>
+                            {{ form.benefit_1 }}
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-3">
-                            <label for="{{ form.url.id_for_label }}">{{ form.url.label }}</label>
-                            {{ form.url }}
+                        <div class="col-sm-12">
+                            <label for="{{ form.benefit_1_disc.id_for_label }}">{{ form.benefit_1_disc.label }}</label>
+                            {{ form.benefit_1_disc }}
                         </div>
                     </div>
-                    
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.benefit_2.id_for_label }}">{{ form.benefit_2.label }}</label>
+                            {{ form.benefit_2 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.benefit_2_disc.id_for_label }}">{{ form.benefit_2_disc.label }}</label>
+                            {{ form.benefit_2_disc }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.benefit_3.id_for_label }}">{{ form.benefit_3.label }}</label>
+                            {{ form.benefit_3 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.benefit_3_disc.id_for_label }}">{{ form.benefit_3_disc.label }}</label>
+                            {{ form.benefit_3_disc }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.benefit_4.id_for_label }}">{{ form.benefit_4.label }}</label>
+                            {{ form.benefit_4 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.benefit_4_disc.id_for_label }}">{{ form.benefit_4_disc.label }}</label>
+                            {{ form.benefit_4_disc }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.section_2_h2.id_for_label }}">{{ form.section_2_h2.label }}</label>
+                            {{ form.section_2_h2 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.service_1.id_for_label }}">{{ form.service_1.label }}</label>
+                            {{ form.service_1 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.service_1_disc.id_for_label }}">{{ form.service_1_disc.label }}</label>
+                            {{ form.service_1_disc }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.service_2.id_for_label }}">{{ form.service_2.label }}</label>
+                            {{ form.service_2 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.service_2_disc.id_for_label }}">{{ form.service_2_disc.label }}</label>
+                            {{ form.service_2_disc }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.service_3.id_for_label }}">{{ form.service_3.label }}</label>
+                            {{ form.service_3 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.service_3_disc.id_for_label }}">{{ form.service_3_disc.label }}</label>
+                            {{ form.service_3_disc }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.service_4.id_for_label }}">{{ form.service_4.label }}</label>
+                            {{ form.service_4 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.service_4_disc.id_for_label }}">{{ form.service_4_disc.label }}</label>
+                            {{ form.service_4_disc }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.service_5.id_for_label }}">{{ form.service_5.label }}</label>
+                            {{ form.service_5 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.service_5_disc.id_for_label }}">{{ form.service_5_disc.label }}</label>
+                            {{ form.service_5_disc }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="{{ form.service_6.id_for_label }}">{{ form.service_6.label }}</label>
+                            {{ form.service_6 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.service_6_disc.id_for_label }}">{{ form.service_6_disc.label }}</label>
+                            {{ form.service_6_disc }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.section_3_h2.id_for_label }}">{{ form.section_3_h2.label }}</label>
+                            {{ form.section_3_h2 }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <label for="{{ form.section_3_content.id_for_label }}">{{ form.section_3_content.label }}</label>
+                            {{ form.section_3_content }}
+                        </div>
+                    </div>
+
+
+                    {% comment %} ------------------------------------------ {% endcomment %}
+
                     
                     <div class="form-group row">
                         <div class="col-sm-6">

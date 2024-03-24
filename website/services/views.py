@@ -8,8 +8,8 @@ from django.views.generic import (
     DeleteView
 )
 from django.contrib import messages
-from .forms import ServiceForm, SubServiceForm
-from .models import Service, SubServices
+from .forms import ServiceForm
+from .models import Service
 # Create your views here.
 
 
@@ -28,9 +28,8 @@ class ServiceListView(ListView):
         return render(request, self.template_name, {'services': services, 'success_messages': success_messages_list})
     
 class CreateServiceView(CreateView):
-    model = Service, SubServices
+    model = Service
     form_class = ServiceForm
-    form_class = SubServiceForm
     template_name= "services/services_form.html"
     success_url = reverse_lazy('service_list')
     def form_valid(self, form):
