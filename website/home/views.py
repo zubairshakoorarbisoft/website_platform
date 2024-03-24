@@ -36,7 +36,7 @@ class CareersPageView(TemplateView):
         context["open_jobs"] = Job.objects.all()
         return context
     
-class JobDetailView(DetailView):
+class SingleJobPage(DetailView):
     model = Job
     context_object_name = 'job_detail'
     template_name = 'home/single_job.html'

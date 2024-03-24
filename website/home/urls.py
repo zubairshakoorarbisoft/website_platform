@@ -6,7 +6,7 @@ from .views import(
      SingleServicePage,
      SingleProductPage,
      SingleTechnologyPage,
-     JobDetailView
+     SingleJobPage
 )
 
 from .import views
@@ -19,7 +19,7 @@ urlpatterns = [
     path('product/<str:url>/',  SingleProductPage.as_view(), name='product_detail' ),
     path('technology/<str:url>/',  SingleTechnologyPage.as_view(), name='technology_detail' ),
     path('careers/', CareersPageView.as_view(), name='careers'),
-    path('careers/<str:pk>/',  JobDetailView.as_view(), name='job_detail' ),
+    path('careers/<str:pk>/',  SingleJobPage.as_view(), name='job_detail' ),
 
     path('share/facebook/', views.share_facebook, name='share_facebook'),
     path('share/twitter/', views.share_twitter, name='share_twitter'),
